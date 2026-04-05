@@ -490,7 +490,7 @@ return`<div class="anim-up"> ${S.showExpForm?`<div class="card anim-pop" style="
 <button class="btn" id="btn-cancel-exp" style="padding:10px 14px;background:#1e2a38;color:#6b8aa8;font-size:14px">✕</button>
 </div>
 </div>`:`<button class="btn" id="btn-show-exp" style="width:100%;padding:13px;background:linear-gradient(135deg,#1a6630,#2ea043);color:#fff;font-size:15px;margin-bottom:14px;border-radius:12px">${L.addExpense}</button>`} ${expenses.length===0?`<div style="text-align:center;color:#1e2e3e;padding:40px 0;font-size:14px;font-weight:700">${L.noExpenses}</div>`: `<div class="label">${expenses.length} · ${fmt(total)} ${L.total}</div>
-${[…expenses].reverse().map(e=>{
+${expenses.slice().reverse().map(e=>{
 const isCustom=e.splitMode===‘custom’;
 const addedByMe=e.addedBy===ME;
 const cnt=isCustom?null:shareCount(e,people);
@@ -602,7 +602,7 @@ updateCustomRows(people,adults);updateSharePreview(people);
 }));
 document.querySelectorAll(’.chip-p’).forEach(b=>b.addEventListener(‘click’,()=>{
 const pid=b.dataset.pid;
-S.expParticipants=S.expParticipants.includes(pid)?S.expParticipants.filter(x=>x!==pid):[…S.expParticipants,pid];
+S.expParticipants=S.expParticipants.includes(pid)?S.expParticipants.filter(x=>x!==pid):S.expParticipants.concat([pid]);
 if(!S.expParticipants.includes(pid))delete S.customShares[pid];
 b.classList.toggle(‘on’,S.expParticipants.includes(pid));
 updateCustomRows(people,adults);updateSharePreview(people);
