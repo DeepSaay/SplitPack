@@ -402,16 +402,25 @@ async function dbJoin(code){
 }
 
 // ── Shared share-count helper ─────────────────────────────────────────────
-// Returns {adultId: numberOfShares} for an equal-split expense
 function getShareCount(e, allPeople){
   const raw = e.rawParticipants || e.participants || [];
   const shareCount = {};
   raw.forEach(pid => {
     const p = allPeople.find(x => x.id === pid);
     if (!p) return;
-    const aid = p.isDependent ? p.guardianId : p.id;
-    if (aid) shareCount[aid] = (shareCount[aid] || 0) + 1;
+    if (p.isDependent) {
+      // dependent → add share to guardian
+      if (p.guardianId) shareCount[p.guardianId] = (shareCount[p.guardianId] || 0) + 1;
+    } else {
+      shareCount[p.id] = (shareCount[p.id] || 0) + 1;
+    }
   });
+  // Fallback: if rawParticipants had no dependents and equals participants,
+  // check if any adult in allPeople has dependents that should be included
+  // by seeing if guardians appear — if so just count as-is (1 share each)
+  if (Object.keys(shareCount).length === 0) {
+    (e.participants||[]).forEach(pid => { shareCount[pid] = (shareCount[pid]||0)+1; });
+  }
   return shareCount;
 }
 
@@ -1248,7 +1257,11 @@ async function saveExpense(){
   }else{
     const participants=resolveP(S.expParticipants,tr.people);
     const autoReviewed = ME === tr.ownerId;
-    exp={id:uid(),desc:S.expDesc.trim(),amount:amt,payerId:S.expPayer,splitMode:'equal',participants,rawParticipants:[...S.expParticipants],addedBy:ME,reviewed:autoReviewed,createdAt:Date.now()};
+    // Always save rawParticipants with ALL selected IDs including dependents
+    exp={id:uid(),desc:S.expDesc.trim(),amount:amt,payerId:S.expPayer,splitMode:'equal',
+      participants,
+      rawParticipants:[...S.expParticipants],
+      addedBy:ME,reviewed:autoReviewed,createdAt:Date.now()};
   }
   await dbSaveTrip({...tr,expenses:[...tr.expenses,exp]});
   set({showExpForm:false,expDesc:'',expAmount:'',expPayer:'',expParticipants:[],splitMode:'equal',customShares:{}});
