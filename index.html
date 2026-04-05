@@ -876,11 +876,11 @@ function tabExpenses(people,adults,expenses,isOwner,pName){
             </button>`).join('')}
         </div>
         ${S.splitMode==='equal'&&S.expParticipants.length>0&&S.expAmount?`
-        <div style="font-size:11px;color:#2e4a64;margin-top:8px;font-weight:700">
+        <div id="share-preview" style="font-size:11px;color:#2e4a64;margin-top:8px;font-weight:700">
           ${fmt(parseFloat(S.expAmount)/resolveP(S.expParticipants,people).length)} ${L.perAdult} × ${resolveP(S.expParticipants,people).length}
-        </div>`:''}
+        </div>`:`<div id="share-preview" style="display:none"></div>`}
       </div>
-      ${customRows}
+      <div id="custom-rows-container"></div>
       <div style="display:flex;gap:8px;margin-top:12px">
         <button class="btn" id="btn-save-exp" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:14px">${L.saveExpense}</button>
         <button class="btn" id="btn-cancel-exp" style="padding:10px 14px;background:#1e2a38;color:#6b8aa8;font-size:14px">✕</button>
@@ -1080,31 +1080,46 @@ function bindTrip(tr){
     if(people.length<2){alert(L.addMember);return;}
     set({showExpForm:true,expDesc:'',expAmount:'',expPayer:'',expParticipants:[],splitMode:'equal',customShares:{}});
   });
-  document.getElementById('exp-desc')?.addEventListener('input',e=>S.expDesc=e.target.value);
-  document.getElementById('exp-amount')?.addEventListener('input',e=>{S.expAmount=e.target.value;});
-  document.getElementById('exp-amount')?.addEventListener('blur',()=>render());
-  document.getElementById('exp-payer')?.addEventListener('change',e=>S.expPayer=e.target.value);
+  // ── Expense form: never re-render on text/number input ──
+  document.getElementById('exp-desc')?.addEventListener('input',e=>{ S.expDesc=e.target.value; });
+  document.getElementById('exp-amount')?.addEventListener('input',e=>{ S.expAmount=e.target.value; });
+  document.getElementById('exp-payer')?.addEventListener('change',e=>{ S.expPayer=e.target.value; });
   document.getElementById('btn-all')?.addEventListener('click',()=>{
     const all=people.map(p=>p.id);
-    set({expParticipants:S.expParticipants.length===all.length?[]:all,customShares:{}});
+    S.expParticipants=S.expParticipants.length===all.length?[]:all;
+    S.customShares={};
+    // Manually update chip styles without full re-render
+    document.querySelectorAll('.chip-p').forEach(b=>{
+      b.classList.toggle('on', S.expParticipants.includes(b.dataset.pid));
+    });
+    document.getElementById('btn-all').textContent=S.expParticipants.length===all.length?L.deselectAll:L.selectAll;
+    updateCustomRows(people,adults);
+    updateSharePreview(people);
   });
-  document.querySelectorAll('.split-mode-btn').forEach(b=>b.addEventListener('click',()=>set({splitMode:b.dataset.mode,customShares:{}})));
+  document.querySelectorAll('.split-mode-btn').forEach(b=>b.addEventListener('click',()=>{
+    S.splitMode=b.dataset.mode; S.customShares={};
+    document.querySelectorAll('.split-mode-btn').forEach(x=>{
+      const isEq=x.dataset.mode==='equal';
+      x.style.background=x.dataset.mode===S.splitMode?(isEq?'#4a9eff':'#f0883e'):'#1e2a38';
+      x.style.color=x.dataset.mode===S.splitMode?'#fff':'#6b8aa8';
+    });
+    updateCustomRows(people,adults);
+    updateSharePreview(people);
+  }));
   document.querySelectorAll('.chip-p').forEach(b=>b.addEventListener('click',()=>{
     const pid=b.dataset.pid;
     const cur=S.expParticipants;
-    const next=cur.includes(pid)?cur.filter(x=>x!==pid):[...cur,pid];
-    const shares={...S.customShares};
-    if(!next.includes(pid))delete shares[pid];
-    set({expParticipants:next,customShares:shares});
+    S.expParticipants=cur.includes(pid)?cur.filter(x=>x!==pid):[...cur,pid];
+    if(!S.expParticipants.includes(pid)) delete S.customShares[pid];
+    b.classList.toggle('on', S.expParticipants.includes(pid));
+    updateCustomRows(people,adults);
+    updateSharePreview(people);
   }));
   document.querySelectorAll('.cat-chip').forEach(b=>b.addEventListener('click',()=>{
     S.expDesc=b.dataset.cat;
-    document.getElementById('exp-desc').value=S.expDesc;
+    const inp=document.getElementById('exp-desc');
+    if(inp) inp.value=S.expDesc;
   }));
-  document.querySelectorAll('.custom-share-inp').forEach(inp=>inp.addEventListener('input',e=>{
-    S.customShares={...S.customShares,[inp.dataset.pid]:e.target.value};
-  }));
-  document.querySelectorAll('.custom-share-inp').forEach(inp=>inp.addEventListener('blur',()=>render()));
   document.getElementById('btn-save-exp')?.addEventListener('click',saveExpense);
   document.getElementById('btn-cancel-exp')?.addEventListener('click',()=>set({showExpForm:false}));
   document.querySelectorAll('.btn-del-exp').forEach(b=>b.addEventListener('click',()=>delExpense(tr,b.dataset.eid)));
@@ -1207,6 +1222,62 @@ async function delExpense(tr,eid){
 
 async function reviewExpense(tr,eid){
   await dbSaveTrip({...tr,expenses:tr.expenses.map(e=>e.id===eid?{...e,reviewed:true}:e)});
+}
+
+// ── Partial UI updates for expense form (no full re-render) ───────────────
+function updateSharePreview(people){
+  const preview=document.getElementById('share-preview');
+  if(!preview) return;
+  const amt=parseFloat(S.expAmount||0);
+  const resolved=resolveP(S.expParticipants,people);
+  if(S.splitMode==='equal'&&S.expParticipants.length>0&&amt>0){
+    preview.textContent=`${fmt(amt/resolved.length)} per adult × ${resolved.length}`;
+    preview.style.display='block';
+  } else {
+    preview.style.display='none';
+  }
+}
+
+function updateCustomRows(people,adults){
+  const container=document.getElementById('custom-rows-container');
+  if(!container) return;
+  if(S.splitMode!=='custom'||S.expParticipants.length===0){
+    container.innerHTML=''; return;
+  }
+  const L=t();
+  const resolvedIds=resolveP(S.expParticipants,people);
+  const resolvedPeople=adults.filter(p=>resolvedIds.includes(p.id));
+  const usedTotal=resolvedPeople.reduce((s,p)=>s+parseFloat(S.customShares[p.id]||0),0);
+  const remaining=parseFloat(S.expAmount||0)-usedTotal;
+  container.innerHTML=`
+    <div style="margin-top:10px;background:#0b0f14;border-radius:10px;padding:12px;border:1px solid #1e2a38">
+      <div style="font-size:12px;color:#6b8aa8;font-weight:700;margin-bottom:8px">${L.enterShares}</div>
+      ${resolvedPeople.map(p=>`
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <div style="font-size:13px;font-weight:700;flex:1">${esc(p.name)}</div>
+          <div style="display:flex;align-items:center;gap:4px">
+            <span style="color:#3a5a78;font-size:13px">₹</span>
+            <input class="inp custom-share-inp" data-pid="${p.id}" value="${esc(S.customShares[p.id]||'')}" type="number" placeholder="0"
+              style="width:90px;padding:6px 10px;text-align:right"/>
+          </div>
+        </div>`).join('')}
+      <div style="display:flex;justify-content:space-between;font-size:12px;padding-top:8px;border-top:1px solid #1e2a38;margin-top:4px">
+        <span style="color:#6b8aa8">${L.remaining}</span>
+        <span id="remaining-amt" style="font-weight:800;color:${Math.abs(remaining)<0.01?'#3fb950':remaining<0?'#f85149':'#f0883e'}">${fmt(remaining)}</span>
+      </div>
+    </div>`;
+  // Bind custom share inputs without re-render
+  container.querySelectorAll('.custom-share-inp').forEach(inp=>inp.addEventListener('input',e=>{
+    S.customShares={...S.customShares,[inp.dataset.pid]:e.target.value};
+    const amt=parseFloat(S.expAmount||0);
+    const used=resolvedPeople.reduce((s,p)=>s+parseFloat(S.customShares[p.id]||0),0);
+    const rem=amt-used;
+    const remEl=document.getElementById('remaining-amt');
+    if(remEl){
+      remEl.textContent=fmt(rem);
+      remEl.style.color=Math.abs(rem)<0.01?'#3fb950':rem<0?'#f85149':'#f0883e';
+    }
+  }));
 }
 
 boot();
