@@ -401,6 +401,30 @@ async function dbJoin(code){
   return tSnap.data();
 }
 
+// ── Shared share-count helper ─────────────────────────────────────────────
+// Returns {adultId: numberOfShares} for an equal-split expense
+function getShareCount(e, allPeople){
+  const raw = e.rawParticipants || e.participants || [];
+  const shareCount = {};
+  raw.forEach(pid => {
+    const p = allPeople.find(x => x.id === pid);
+    if (!p) return;
+    const aid = p.isDependent ? p.guardianId : p.id;
+    if (aid) shareCount[aid] = (shareCount[aid] || 0) + 1;
+  });
+  return shareCount;
+}
+
+// Returns share amount for a specific adult in an expense
+function getAdultShare(e, adultId, allPeople){
+  if (e.splitMode === 'custom') return e.customShares?.[adultId] || 0;
+  const shareCount = getShareCount(e, allPeople);
+  const totalShares = Object.values(shareCount).reduce((s,n) => s+n, 0);
+  if (!totalShares) return 0;
+  const unit = e.amount / totalShares;
+  return unit * (shareCount[adultId] || 0);
+}
+
 // ── Settle-up ─────────────────────────────────────────────────────────────
 function settle(adults, expenses, allPeople){
   const bal={};
