@@ -1081,7 +1081,8 @@ function bindTrip(tr){
     set({showExpForm:true,expDesc:'',expAmount:'',expPayer:'',expParticipants:[],splitMode:'equal',customShares:{}});
   });
   document.getElementById('exp-desc')?.addEventListener('input',e=>S.expDesc=e.target.value);
-  document.getElementById('exp-amount')?.addEventListener('input',e=>{S.expAmount=e.target.value;render();});
+  document.getElementById('exp-amount')?.addEventListener('input',e=>{S.expAmount=e.target.value;});
+  document.getElementById('exp-amount')?.addEventListener('blur',()=>render());
   document.getElementById('exp-payer')?.addEventListener('change',e=>S.expPayer=e.target.value);
   document.getElementById('btn-all')?.addEventListener('click',()=>{
     const all=people.map(p=>p.id);
@@ -1102,8 +1103,8 @@ function bindTrip(tr){
   }));
   document.querySelectorAll('.custom-share-inp').forEach(inp=>inp.addEventListener('input',e=>{
     S.customShares={...S.customShares,[inp.dataset.pid]:e.target.value};
-    render();
   }));
+  document.querySelectorAll('.custom-share-inp').forEach(inp=>inp.addEventListener('blur',()=>render()));
   document.getElementById('btn-save-exp')?.addEventListener('click',saveExpense);
   document.getElementById('btn-cancel-exp')?.addEventListener('click',()=>set({showExpForm:false}));
   document.querySelectorAll('.btn-del-exp').forEach(b=>b.addEventListener('click',()=>delExpense(tr,b.dataset.eid)));
