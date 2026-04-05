@@ -402,25 +402,31 @@ async function dbJoin(code){
 }
 
 // ── Shared share-count helper ─────────────────────────────────────────────
+// rawParticipants = all selected IDs including dependents (children)
+// participants = resolved adult IDs only
+// We ALWAYS use rawParticipants to count shares correctly
 function getShareCount(e, allPeople){
-  const raw = e.rawParticipants || e.participants || [];
   const shareCount = {};
+  // Prefer rawParticipants as it contains dependent IDs
+  const raw = e.rawParticipants && e.rawParticipants.length > 0
+    ? e.rawParticipants
+    : e.participants || [];
+
   raw.forEach(pid => {
     const p = allPeople.find(x => x.id === pid);
-    if (!p) return;
-    if (p.isDependent) {
-      // dependent → add share to guardian
-      if (p.guardianId) shareCount[p.guardianId] = (shareCount[p.guardianId] || 0) + 1;
+    if (!p) {
+      // Unknown person — count directly (legacy data)
+      shareCount[pid] = (shareCount[pid] || 0) + 1;
+      return;
+    }
+    if (p.isDependent && p.guardianId) {
+      // Dependent → add share to guardian
+      shareCount[p.guardianId] = (shareCount[p.guardianId] || 0) + 1;
     } else {
+      // Adult → add share to themselves
       shareCount[p.id] = (shareCount[p.id] || 0) + 1;
     }
   });
-  // Fallback: if rawParticipants had no dependents and equals participants,
-  // check if any adult in allPeople has dependents that should be included
-  // by seeing if guardians appear — if so just count as-is (1 share each)
-  if (Object.keys(shareCount).length === 0) {
-    (e.participants||[]).forEach(pid => { shareCount[pid] = (shareCount[pid]||0)+1; });
-  }
   return shareCount;
 }
 
