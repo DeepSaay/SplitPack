@@ -906,7 +906,21 @@ function tabExpenses(people,adults,expenses,isOwner,pName){
               <div style="font-size:12px;color:#4a6a88;margin-top:2px">${L.paidBy} <span style="color:#4a9eff">${esc(pName(e.payerId))}</span></div>
               ${isCustom
                 ?`<div style="font-size:11px;color:#2e4a64;margin-top:2px">${Object.entries(e.customShares||{}).map(([pid,amt])=>`${esc(pName(pid))}: ${fmt(amt)}`).join(' · ')}</div>`
-                :`<div style="font-size:11px;color:#3fb950;margin-top:2px">${fmt(e.amount/e.participants.length)}/${L.perAdult} × ${e.participants.length}</div>`}
+                :`<div style="font-size:11px;color:#3fb950;margin-top:2px">${(()=>{
+                    const raw=e.rawParticipants||e.participants||[];
+                    const shareCount={};
+                    raw.forEach(pid=>{
+                      const p=people.find(x=>x.id===pid);
+                      if(!p) return;
+                      const aid=p.isDependent?p.guardianId:p.id;
+                      shareCount[aid]=(shareCount[aid]||0)+1;
+                    });
+                    const totalShares=Object.values(shareCount).reduce((s,n)=>s+n,0);
+                    const unit=totalShares?e.amount/totalShares:0;
+                    return Object.entries(shareCount).map(([pid,count])=>
+                      `${esc(pName(pid))}: ${fmt(unit*count)}`
+                    ).join(' · ');
+                  })()}</div>`}
             </div>
           </div>
           <div style="text-align:right;margin-left:10px;flex-shrink:0">
