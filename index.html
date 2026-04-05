@@ -1243,9 +1243,23 @@ function updateSharePreview(people){
   const preview=document.getElementById('share-preview');
   if(!preview) return;
   const amt=parseFloat(S.expAmount||0);
-  const resolved=resolveP(S.expParticipants,people);
   if(S.splitMode==='equal'&&S.expParticipants.length>0&&amt>0){
-    preview.textContent=`${fmt(amt/resolved.length)} per adult × ${resolved.length}`;
+    // Count shares per adult (each dependent adds 1 share to guardian)
+    const shareCount={};
+    S.expParticipants.forEach(pid=>{
+      const p=people.find(x=>x.id===pid);
+      if(!p) return;
+      const aid=p.isDependent?p.guardianId:p.id;
+      shareCount[aid]=(shareCount[aid]||0)+1;
+    });
+    const totalShares=Object.values(shareCount).reduce((s,n)=>s+n,0);
+    const unit=totalShares?amt/totalShares:0;
+    const lines=Object.entries(shareCount).map(([pid,count])=>{
+      const p=people.find(x=>x.id===pid);
+      const name=p?p.name:'?';
+      return `${name}: ${fmt(unit*count)}${count>1?` (×${count})`:''}`;
+    }).join(' · ');
+    preview.innerHTML=`<div style="font-size:11px;color:#2e4a64;margin-top:8px;font-weight:700">${lines}</div>`;
     preview.style.display='block';
   } else {
     preview.style.display='none';
