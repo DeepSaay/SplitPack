@@ -50,9 +50,9 @@ import{getFirestore,doc,setDoc,onSnapshot,getDoc}from"https://www.gstatic.com/fi
 var app=initializeApp({apiKey:"AIzaSyDMN8q8zQm76B68wJShpc1BafU7rCWLpuE",authDomain:"splitpack-7c1a4.firebaseapp.com",projectId:"splitpack-7c1a4",storageBucket:"splitpack-7c1a4.firebasestorage.app",messagingSenderId:"189484190941",appId:"1:189484190941:web:704c5cac39e91052ec9f34"});
 var db=getFirestore(app);
 var T={
-en:{appTagline:"Fair splits - Happy trips - Zero drama",yourName:"Your name on this device",newTrip:"✈️ New Trip",joinTrip:"🔑 Join Trip",nameAdventure:"🗺 Name your adventure",tripPlaceholder:"e.g. Goa 2025",create:"🚀 Create",enterCode:"🔑 Enter code",codePlaceholder:"e.g. GOA25X",join:"Join",joining:"Joining...",noTrips:"No trips yet. Create or join one above!",shareCode:"Share code",owner:"👑 Owner",toReview:"to review",crew:"👥 Crew",expenses:"💸 Expenses",settleUp:"🧮 Settle Up",addMember:"➕ Add Member",namePlaceholder:"Name...",dependent:"👶 Dependent (non-paying)",assignGuardian:"Assign guardian",addToCrew:"Add to Crew",photoTip:"Tap edit to add photo and UPI",paying:"paying",billedUnder:"Billed under",guardianOf:"Guardian of",newExpense:"💸 New Expense",whatWasIt:"What was it?",totalAmount:"Total Amount (₹)",whoPaid:"Who paid?",equalSplit:"⚖️ Equal Split",customAmounts:"✏️ Custom Amounts",whoConsumed:"Who consumed?",whoConsumedCustom:"Who consumed? (select to enter amounts)",deselectAll:"Deselect All",selectAll:"Select All",enterShares:"Enter each persons share:",remaining:"Remaining unallocated",saveExpense:"Save Expense",addExpense:"+ Add Expense",noExpenses:"No expenses yet 🎉",paidBy:"Paid by",addedBy:"Added by",customSplit:"Custom split",equalSplitLabel:"Equal split",reviewed:"✅ Reviewed",pending:"⏳ Pending",review:"✅ Review",balanceSummary:"Balance Summary",getsBack:"gets back",owes:"owes",settled:"settled ✅",paymentsNeeded:"Payment(s) needed",allSettled:"✅ All Settled!",pays:"pays",payViaUPI:"💳 Pay via UPI:",exportPDF:"🧾 Export Trip Report",editMember:"✏️ Edit Member",profilePhoto:"Profile Photo",photoTipModal:"Tap to upload. Auto-cropped.",remove:"Remove",upiOptional:"(optional)",save:"Save",cancel:"Cancel",leave:"🚪 Leave",deleteTrip:"Delete this trip for everyone?",leaveTrip:"Leave this trip?",total:"Total",trips:"Trips",members:"members",paying2:"paying",synced:"Real-time sync - Share code to invite friends",youAre:"You:",expCategories:{food:"🍕 Food and Drinks",transport:"🚕 Transport",hotel:"🏨 Hotel / Stay",fuel:"⛽ Fuel",activities:"🎢 Activities",shopping:"🛒 Shopping",other:"🎑 Other"}},
-hi:{appTagline:"उचित बंटवारा - खुशहाल यात्रा - झंझट नहीं",yourName:"इस डिवाइस पर आपका नाम",newTrip:"✈️ नई यात्रा",joinTrip:"🔑 यात्रा जोड़ें",nameAdventure:"🗺 यात्रा का नाम",tripPlaceholder:"जैसे गोवा 2025",create:"🚀 बनाएं",enterCode:"🔑 कोड डालें",codePlaceholder:"जैसे GOA25X",join:"जोड़ें",joining:"जोड़ा जा रहा है...",noTrips:"अभी कोई यात्रा नहीं। ऊपर बनाएं या जोड़ें!",shareCode:"शेयर कोड",owner:"👑 मालिक",toReview:"समीक्षा के लिए",crew:"👥 दल",expenses:"💸 खर्च",settleUp:"🧮 हिसाब",addMember:"➕ सदस्य जोड़ें",namePlaceholder:"नाम...",dependent:"👶 आश्रित (भुगतान नहीं)",assignGuardian:"अभिभावक चुनें",addToCrew:"दल में जोड़ें",photoTip:"फोटो और UPI के लिए ✏️ दबाएं",paying:"भुगतानकर्ता",billedUnder:"खाता:",guardianOf:"अभिभावक:",newExpense:"💸 नया खर्च",whatWasIt:"क्या खरीदा?",totalAmount:"कुल राशि (₹)",whoPaid:"किसने भुगतान किया?",equalSplit:"⚖️ बराबर बांटें",customAmounts:"✏️ अलग-अलग राशि",whoConsumed:"किसने लिया?",whoConsumedCustom:"किसने लिया? (राशि दर्ज करें)",deselectAll:"सभी हटाएं",selectAll:"सभी चुनें",enterShares:"प्रत्येक की राशि दर्ज करें:",remaining:"शेष राशि",saveExpense:"खर्च सहेजें",addExpense:"+ खर्च जोड़ें",noExpenses:"अभी कोई खर्च नहीं 🎉",paidBy:"भुगतान:",addedBy:"जोड़ा:",customSplit:"अलग बंटवारा",equalSplitLabel:"बराबर बंटवारा",reviewed:"✅ समीक्षित",pending:"⏳ लंबित",review:"✅ समीक्षा करें",balanceSummary:"बैलेंस सारांश",getsBack:"वापस मिलेगा",owes:"देना है",settled:"बराबर ✅",paymentsNeeded:"भुगतान बाकी",allSettled:"✅ सब बराबर!",pays:"देगा",payViaUPI:"💳 UPI से भुगतान करें:",exportPDF:"🧾 रिपोर्ट निर्यात करें",editMember:"✏️ सदस्य संपादित करें",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करें। अपने आप क्रॉप होगा।",remove:"हटाएं",upiOptional:"(वैकल्पिक)",save:"सहेजें",cancel:"रद्द करें",leave:"🚪 छोड़ें",deleteTrip:"सभी के लिए यह यात्रा हटाएं?",leaveTrip:"यह यात्रा छोड़ें?",total:"कुल",trips:"यात्रा",members:"सदस्य",paying2:"भुगतानकर्ता",synced:"लाइव सिंक - कोड शेयर करें",youAre:"आप:",expCategories:{food:"🍕 खाना-पीना",transport:"🚕 यातायात",hotel:"🏨 होटल / ठहराव",fuel:"⛽ ईंधन",activities:"🎢 गतिविधियां",shopping:"🛒 खरीदारी",other:"🎑 अन्य"}},
-mr:{appTagline:"योग्य वाटणी - आनंदी सहल - कटकट नाही",yourName:"या डिव्हाइसवर तुमचे नाव",newTrip:"✈️ नवीन सहल",joinTrip:"🔑 सहलमध्ये सामील व्हा",nameAdventure:"🗺 सहलीचे नाव",tripPlaceholder:"उदा. गोवा 2025",create:"🚀 तयार करा",enterCode:"🔑 कोड टाका",codePlaceholder:"उदा. GOA25X",join:"सामील व्हा",joining:"सामील होत आहे...",noTrips:"अजून कोणतीही सहल नाही. वर तयार करा किंवा सामील व्हा!",shareCode:"शेअर कोड",owner:"👑 मालक",toReview:"तपासणीसाठी",crew:"👥 गट",expenses:"💸 खर्च",settleUp:"🧮 हिशोब",addMember:"➕ सदस्य जोडा",namePlaceholder:"नाव...",dependent:"👶 अवलंबित (पैसे देत नाही)",assignGuardian:"पालक निवडा",addToCrew:"गटात जोडा",photoTip:"फोटो व UPI साठी ✏️ दाबा",paying:"पैसे देणारे",billedUnder:"खाते:",guardianOf:"पालक:",newExpense:"💸 नवीन खर्च",whatWasIt:"काय विकत घेतले?",totalAmount:"एकूण रक्कम (₹)",whoPaid:"कोणी पैसे दिले?",equalSplit:"⚖️ समान वाटणी",customAmounts:"✏️ वेगळ्या रकमा",whoConsumed:"कोणी घेतले?",whoConsumedCustom:"कोणी घेतले? (रक्कम टाका)",deselectAll:"सर्व काढा",selectAll:"सर्व निवडा",enterShares:"प्रत्येकाची रक्कम टाका:",remaining:"उर्वरित रक्कम",saveExpense:"खर्च जतन करा",addExpense:"+ खर्च जोडा",noExpenses:"अजून कोणताही खर्च नाही 🎉",paidBy:"पैसे दिले:",addedBy:"जोडले:",customSplit:"वेगळी वाटणी",equalSplitLabel:"समान वाटणी",reviewed:"✅ तपासले",pending:"⏳ प्रलंबित",review:"✅ तपासा",balanceSummary:"शिल्लक सारांश",getsBack:"परत मिळेल",owes:"द्यायचे आहे",settled:"बरोबर ✅",paymentsNeeded:"देणी बाकी",allSettled:"✅ सर्व बरोबर!",pays:"देईल",payViaUPI:"💳 UPI ने द्या:",exportPDF:"🧾 अहवाल निर्यात करा",editMember:"✏️ सदस्य संपादित करा",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करा. आपोआप क्रॉप होईल.",remove:"काढा",upiOptional:"(पर्यायी)",save:"जतन करा",cancel:"रद्द करा",leave:"🚪 सोडा",deleteTrip:"सर्वांसाठी ही सहल हटवायची?",leaveTrip:"ही सहल सोडायची?",total:"एकूण",trips:"सहल",members:"सदस्य",paying2:"पैसे देणारे",synced:"थेट समक्रमण - कोड शेअर करा",youAre:"तुम्ही:",expCategories:{food:"🍕 खाणे-पिणे",transport:"🚕 वाहतूक",hotel:"🏨 हॉटेल / निवास",fuel:"⛽ इंधन",activities:"🎢 उपक्रम",shopping:"🛒 खरेदी",other:"🎑 इतर"}}
+en:{appTagline:"Fair splits - Happy trips - Zero drama",yourName:"Your name on this device",newTrip:"✈️ New Trip",joinTrip:"🔑 Join Trip",nameAdventure:"🗺 Name your adventure",tripPlaceholder:"e.g. Goa 2025",create:"🚀 Create",enterCode:"🔑 Enter code",codePlaceholder:"e.g. GOA25X",join:"Join",joining:"Joining...",noTrips:"No trips yet. Create or join one above!",shareCode:"Share code",owner:"👑 Owner",toReview:"to review",crew:"👥 Crew",expenses:"💸 Expenses",settleUp:"🧮 Settle Up",addMember:"➕ Add Member",namePlaceholder:"Name...",dependent:"👶 Dependent (non-paying)",assignGuardian:"Assign guardian",addToCrew:"Add to Crew",photoTip:"Tap edit to add photo and UPI",paying:"paying",billedUnder:"Billed under",guardianOf:"Guardian of",newExpense:"💸 New Expense",whatWasIt:"What was it?",totalAmount:"Total Amount (Rs.)",whoPaid:"Who paid?",equalSplit:"⚖️ Equal Split",customAmounts:"✏️ Custom Amounts",whoConsumed:"Who consumed?",whoConsumedCustom:"Who consumed? (select to enter amounts)",deselectAll:"Deselect All",selectAll:"Select All",enterShares:"Enter each persons share:",remaining:"Remaining unallocated",saveExpense:"Save Expense",addExpense:"+ Add Expense",noExpenses:"No expenses yet 🎉",paidBy:"Paid by",addedBy:"Added by",customSplit:"Custom split",equalSplitLabel:"Equal split",reviewed:"✅ Reviewed",pending:"⏳ Pending",review:"✅ Review",balanceSummary:"Balance Summary",getsBack:"gets back",owes:"owes",settled:"settled ✅",paymentsNeeded:"Payment(s) needed",allSettled:"✅ All Settled!",pays:"pays",payViaUPI:"💳 Pay via UPI:",exportPDF:"🧾 Export Trip Report",editMember:"✏️ Edit Member",profilePhoto:"Profile Photo",photoTipModal:"Tap to upload. Auto-cropped.",remove:"Remove",upiOptional:"(optional)",save:"Save",cancel:"Cancel",leave:"🚪 Leave",deleteTrip:"Delete this trip for everyone?",leaveTrip:"Leave this trip?",total:"Total",trips:"Trips",members:"members",paying2:"paying",synced:"Real-time sync - Share code to invite friends",youAre:"You:",perPersonSummary:"Per Person Summary",perPersonTotal:"Total",bundled:"bundled in guardian",expCategories:{food:"🍕 Food and Drinks",transport:"🚕 Transport",hotel:"🏨 Hotel / Stay",fuel:"⛽ Fuel",activities:"🎢 Activities",shopping:"🛒 Shopping",other:"🎑 Other"}},
+hi:{appTagline:"उचित बंटवारा - खुशहाल यात्रा - झंझट नहीं",yourName:"इस डिवाइस पर आपका नाम",newTrip:"✈️ नई यात्रा",joinTrip:"🔑 यात्रा जोड़ें",nameAdventure:"🗺 यात्रा का नाम",tripPlaceholder:"जैसे गोवा 2025",create:"🚀 बनाएं",enterCode:"🔑 कोड डालें",codePlaceholder:"जैसे GOA25X",join:"जोड़ें",joining:"जोड़ा जा रहा है...",noTrips:"अभी कोई यात्रा नहीं। ऊपर बनाएं या जोड़ें!",shareCode:"शेयर कोड",owner:"👑 मालिक",toReview:"समीक्षा के लिए",crew:"👥 दल",expenses:"💸 खर्च",settleUp:"🧮 हिसाब",addMember:"➕ सदस्य जोड़ें",namePlaceholder:"नाम...",dependent:"👶 आश्रित (भुगतान नहीं)",assignGuardian:"अभिभावक चुनें",addToCrew:"दल में जोड़ें",photoTip:"फोटो और UPI के लिए ✏️ दबाएं",paying:"भुगतानकर्ता",billedUnder:"खाता:",guardianOf:"अभिभावक:",newExpense:"💸 नया खर्च",whatWasIt:"क्या खरीदा?",totalAmount:"कुल राशि",whoPaid:"किसने भुगतान किया?",equalSplit:"⚖️ बराबर बांटें",customAmounts:"✏️ अलग-अलग राशि",whoConsumed:"किसने लिया?",whoConsumedCustom:"किसने लिया? (राशि दर्ज करें)",deselectAll:"सभी हटाएं",selectAll:"सभी चुनें",enterShares:"प्रत्येक की राशि दर्ज करें:",remaining:"शेष राशि",saveExpense:"खर्च सहेजें",addExpense:"+ खर्च जोड़ें",noExpenses:"अभी कोई खर्च नहीं 🎉",paidBy:"भुगतान:",addedBy:"जोड़ा:",customSplit:"अलग बंटवारा",equalSplitLabel:"बराबर बंटवारा",reviewed:"✅ समीक्षित",pending:"⏳ लंबित",review:"✅ समीक्षा करें",balanceSummary:"बैलेंस सारांश",getsBack:"वापस मिलेगा",owes:"देना है",settled:"बराबर ✅",paymentsNeeded:"भुगतान बाकी",allSettled:"✅ सब बराबर!",pays:"देगा",payViaUPI:"💳 UPI से भुगतान करें:",exportPDF:"🧾 रिपोर्ट निर्यात करें",editMember:"✏️ सदस्य संपादित करें",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करें। अपने आप क्रॉप होगा।",remove:"हटाएं",upiOptional:"(वैकल्पिक)",save:"सहेजें",cancel:"रद्द करें",leave:"🚪 छोड़ें",deleteTrip:"सभी के लिए यह यात्रा हटाएं?",leaveTrip:"यह यात्रा छोड़ें?",total:"कुल",trips:"यात्रा",members:"सदस्य",paying2:"भुगतानकर्ता",synced:"लाइव सिंक - कोड शेयर करें",youAre:"आप:",perPersonSummary:"व्यक्ति अनुसार सारांश",perPersonTotal:"कुल",bundled:"अभिभावक में शामिल",expCategories:{food:"🍕 खाना-पीना",transport:"🚕 यातायात",hotel:"🏨 होटल / ठहराव",fuel:"⛽ ईंधन",activities:"🎢 गतिविधियां",shopping:"🛒 खरीदारी",other:"🎑 अन्य"}},
+mr:{appTagline:"योग्य वाटणी - आनंदी सहल - कटकट नाही",yourName:"या डिव्हाइसवर तुमचे नाव",newTrip:"✈️ नवीन सहल",joinTrip:"🔑 सहलमध्ये सामील व्हा",nameAdventure:"🗺 सहलीचे नाव",tripPlaceholder:"उदा. गोवा 2025",create:"🚀 तयार करा",enterCode:"🔑 कोड टाका",codePlaceholder:"उदा. GOA25X",join:"सामील व्हा",joining:"सामील होत आहे...",noTrips:"अजून कोणतीही सहल नाही. वर तयार करा किंवा सामील व्हा!",shareCode:"शेअर कोड",owner:"👑 मालक",toReview:"तपासणीसाठी",crew:"👥 गट",expenses:"💸 खर्च",settleUp:"🧮 हिशोब",addMember:"➕ सदस्य जोडा",namePlaceholder:"नाव...",dependent:"👶 अवलंबित (पैसे देत नाही)",assignGuardian:"पालक निवडा",addToCrew:"गटात जोडा",photoTip:"फोटो व UPI साठी ✏️ दाबा",paying:"पैसे देणारे",billedUnder:"खाते:",guardianOf:"पालक:",newExpense:"💸 नवीन खर्च",whatWasIt:"काय विकत घेतले?",totalAmount:"एकूण रक्कम",whoPaid:"कोणी पैसे दिले?",equalSplit:"⚖️ समान वाटणी",customAmounts:"✏️ वेगळ्या रकमा",whoConsumed:"कोणी घेतले?",whoConsumedCustom:"कोणी घेतले? (रक्कम टाका)",deselectAll:"सर्व काढा",selectAll:"सर्व निवडा",enterShares:"प्रत्येकाची रक्कम टाका:",remaining:"उर्वरित रक्कम",saveExpense:"खर्च जतन करा",addExpense:"+ खर्च जोडा",noExpenses:"अजून कोणताही खर्च नाही 🎉",paidBy:"पैसे दिले:",addedBy:"जोडले:",customSplit:"वेगळी वाटणी",equalSplitLabel:"समान वाटणी",reviewed:"✅ तपासले",pending:"⏳ प्रलंबित",review:"✅ तपासा",balanceSummary:"शिल्लक सारांश",getsBack:"परत मिळेल",owes:"द्यायचे आहे",settled:"बरोबर ✅",paymentsNeeded:"देणी बाकी",allSettled:"✅ सर्व बरोबर!",pays:"देईल",payViaUPI:"💳 UPI ने द्या:",exportPDF:"🧾 अहवाल निर्यात करा",editMember:"✏️ सदस्य संपादित करा",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करा. आपोआप क्रॉप होईल.",remove:"काढा",upiOptional:"(पर्यायी)",save:"जतन करा",cancel:"रद्द करा",leave:"🚪 सोडा",deleteTrip:"सर्वांसाठी ही सहल हटवायची?",leaveTrip:"ही सहल सोडायची?",total:"एकूण",trips:"सहल",members:"सदस्य",paying2:"पैसे देणारे",synced:"थेट समक्रमण - कोड शेअर करा",youAre:"तुम्ही:",perPersonSummary:"व्यक्तीनुसार सारांश",perPersonTotal:"एकूण",bundled:"पालकात समाविष्ट",expCategories:{food:"🍕 खाणे-पिणे",transport:"🚕 वाहतूक",hotel:"🏨 हॉटेल / निवास",fuel:"⛽ इंधन",activities:"🎢 उपक्रम",shopping:"🛒 खरेदी",other:"🎑 इतर"}}
 };
 var LANG=localStorage.getItem('sp_lang')||'en';
 function t(){return T[LANG];}
@@ -270,7 +270,7 @@ function bindHome(){
   var mInp=document.getElementById('me-inp');if(mInp)mInp.addEventListener('input',function(e){S.tempMe=e.target.value;});
   var bSM=document.getElementById('btn-save-me');if(bSM)bSM.addEventListener('click',function(){if(S.tempMe.trim()){ME=S.tempMe.trim();localStorage.setItem('sp_me',ME);}setState({editingMe:false});});
   var bN=document.getElementById('btn-new');if(bN)bN.addEventListener('click',function(){setState({showNewTrip:true,showJoin:false});});
-  var bCN=document.getElementById('btn-cancel-new');if(bCN)bCN.addEventListener('click',function(){setState({showNewTrip:false,newTripName:''}); });
+  var bCN=document.getElementById('btn-cancel-new');if(bCN)bCN.addEventListener('click',function(){setState({showNewTrip:false,newTripName:''});});
   var ntn=document.getElementById('new-trip-name');if(ntn){ntn.addEventListener('input',function(e){S.newTripName=e.target.value;});ntn.addEventListener('keydown',function(e){if(e.key==='Enter')createTrip();});}
   var bC=document.getElementById('btn-create');if(bC)bC.addEventListener('click',createTrip);
   var bJ=document.getElementById('btn-join');if(bJ)bJ.addEventListener('click',function(){setState({showJoin:true,showNewTrip:false,joinCode:'',joinError:''});});
@@ -363,7 +363,7 @@ function tabExpenses(people,adults,expenses,isOwner,pName){
     html+='</div>';
     html+='<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:12px;color:#6b8aa8;font-weight:700">'+(S.splitMode==='custom'?L.whoConsumedCustom:L.whoConsumed)+'</span><button class="btn" id="btn-all" style="padding:3px 10px;background:#1e2a38;color:#4a9eff;font-size:12px">'+(S.expParticipants.length===people.length?L.deselectAll:L.selectAll)+'</button></div>';
     html+='<div style="display:flex;flex-wrap:wrap;gap:7px">';
-    people.forEach(function(p){html+='<button class="chip'+(S.expParticipants.indexOf(p.id)!==-1?' on':'')+' chip-p" data-pid="'+p.id+'">'+(p.isDependent?'D':av(p.name))+' '+esc(p.name)+'</button>';});
+    people.forEach(function(p){html+='<button class="chip'+(S.expParticipants.indexOf(p.id)!==-1?' on':'')+' chip-p" data-pid="'+p.id+'">'+(p.isDependent?'👶':av(p.name))+' '+esc(p.name)+'</button>';});
     html+='</div><div id="share-preview" style="display:none"></div></div>';
     html+='<div id="custom-rows-container"></div>';
     html+='<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="btn-save-exp" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:14px">'+L.saveExpense+'</button><button class="btn" id="btn-cancel-exp" style="padding:10px 14px;background:#1e2a38;color:#6b8aa8;font-size:14px">X</button></div>';
@@ -386,7 +386,7 @@ function tabExpenses(people,adults,expenses,isOwner,pName){
       html+='<div class="card anim-pop" style="margin-bottom:10px;'+(e.reviewed?'border-color:#3fb95028':'border-color:#f0883e28')+'">';
       html+='<div style="display:flex;justify-content:space-between;align-items:flex-start">';
       html+='<div style="display:flex;gap:12px;flex:1;min-width:0">';
-      html+='<div style="font-size:26px;line-height:1;flex-shrink:0;width:32px;text-align:center;font-weight:800;color:#4a6a88">'+ee(e.desc)+'</div>';
+      html+='<div style="font-size:26px;line-height:1;flex-shrink:0;width:32px;text-align:center;">'+ee(e.desc)+'</div>';
       html+='<div style="flex:1;min-width:0">';
       html+='<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-weight:800;font-size:15px">'+esc(e.desc)+'</span>';
       html+='<span style="font-size:10px;padding:2px 7px;border-radius:10px;font-weight:800;'+(e.reviewed?'background:#3fb95022;color:#3fb950;border:1px solid #3fb95044':'background:#f0883e22;color:#f0883e;border:1px solid #f0883e44')+'">'+(e.reviewed?L.reviewed:L.pending)+'</span>';
@@ -437,20 +437,21 @@ function tabSettle(tr,people,adults,expenses,pName){
     if(toP&&toP.upi)html+='<div style="margin-top:8px;padding:7px 10px;background:#4a9eff0d;border-radius:8px;font-size:12px;color:#4a9eff">'+L.payViaUPI+' <b>'+esc(toP.upi)+'</b></div>';
     html+='</div>';
   });
-  html+='<div class="label" style="margin-top:20px">Per Person Summary</div>';
-  adults.forEach(function(p){
-    var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
-    var allMembers=[p].concat(deps);
+
+// ── PER PERSON SUMMARY ─────────────────────────────────────────────────
+html+=’<div class="label" style="margin-top:20px">’+L.perPersonSummary+’</div>’;
+adults.forEach(function(p){
+var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
+var allMembers=[p].concat(deps);
 
 ```
-// Group total = guardian's adult share (already includes dependent shares via shareCount)
-var myExpenses=expenses.filter(function(e){return adultShare(e,p.id,people)>0;});
-var groupTotal=myExpenses.reduce(function(s,e){return s+adultShare(e,p.id,people);},0);
+// Group total uses adultShare() — same function as settle() so always consistent
+var groupTotal=expenses.reduce(function(s,e){return s+adultShare(e,p.id,people);},0);
 var paid=expenses.filter(function(e){return e.payerId===p.id;}).reduce(function(s,e){return s+e.amount;},0);
 
 html+='<div class="card" style="margin-bottom:12px">';
 
-// Header
+// Header row
 html+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #1e2a38">';
 html+=avHtml(p,40);
 html+='<div style="flex:1"><div style="font-weight:800;font-size:15px">'+esc(p.name);
@@ -463,67 +464,70 @@ html+='<div style="font-size:11px;color:#2e4a64">Paid: <span style="color:#dce6f
 html+='<div style="font-size:11px;color:#2e4a64">Share: <span style="font-weight:800;color:'+(groupTotal>paid?'#f85149':'#3fb950')+'">'+fmt(groupTotal)+'</span></div>';
 html+='</div></div>';
 
-// Each member's expense rows
+// One row per member (guardian + each dependent)
 allMembers.forEach(function(m){
+  // Find expenses where this member appears in rawParticipants
   var mExp=expenses.filter(function(e){
     var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
     return raw.indexOf(m.id)!==-1;
   });
   if(mExp.length===0)return;
 
+  // Member's individual share per expense:
+  // Equal split  -> 1 unit (e.amount / totalShares)
+  // Custom split -> for GUARDIAN: customShares[guardianId] (already includes dependent costs)
+  //                 for DEPENDENT: show as "bundled" since their cost is in guardian's amount
   var mTotal=mExp.reduce(function(s,e){
     if(e.splitMode==='custom'){
-      // Custom: guardian holds the amount for themselves AND their dependents
-      // Show each member's portion: for guardian show their share, for dependent show their share
-      // In custom mode, customShares is keyed by adult ID only
-      // So for dependent: their share is already inside guardian's customShares
-      // We show it as a sub-line under the dependent row by dividing guardian's amount
-      // But since we don't know individual dependent amounts in custom mode,
-      // show the full guardian amount only on guardian row, skip dependent row
-      if(m.isDependent)return s;
+      if(m.isDependent){
+        // Dependent's cost is inside guardian's customShares — show 0 here, noted as bundled
+        return s;
+      }
       return s+((e.customShares&&e.customShares[p.id])||0);
-    }else{
-      // Equal: each person gets exactly 1 unit
-      var cnt=shareCount(e,people);
-      var ts=Object.values(cnt).reduce(function(a,n){return a+n;},0);
-      return ts>0?s+(e.amount/ts):s;
     }
+    // Equal: every selected person gets exactly 1 unit
+    var cnt=shareCount(e,people);
+    var ts=Object.values(cnt).reduce(function(a,n){return a+n;},0);
+    return ts>0?s+(e.amount/ts):s;
   },0);
 
-  // Skip dependent row in custom mode (already shown under guardian)
-  var hasCustomOnly=mExp.every(function(e){return e.splitMode==='custom';});
-  if(m.isDependent&&hasCustomOnly)return;
-
   html+='<div style="background:#0b0f14;border-radius:10px;padding:8px 10px;margin-bottom:6px">';
-  html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">';
-  html+=avHtml(m,28);
+  html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">';
+  html+=avHtml(m,26);
   html+='<div style="font-size:13px;font-weight:800;flex:1">'+esc(m.name);
-  if(m.isDependent)html+=' <span style="font-size:10px;color:#f0883e">dependent</span>';
+  if(m.isDependent)html+=' <span style="font-size:10px;color:#f0883e">👶 dependent</span>';
   html+='</div>';
   html+='<div style="font-size:13px;font-weight:800;color:#4a9eff">'+fmt(mTotal)+'</div>';
   html+='</div>';
 
+  // Expense lines for this member
   mExp.forEach(function(e){
-    var share=0;
-    var label=esc(e.desc);
+    var lineAmt=0;
+    var note='';
     if(e.splitMode==='custom'){
-      if(m.isDependent)return;
-      share=(e.customShares&&e.customShares[p.id])||0;
-      // If there are dependents in this expense, note their cost is included
-      var depsInExp=deps.filter(function(d){
-        var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
-        return raw.indexOf(d.id)!==-1;
-      });
-      if(depsInExp.length)label+=(' <span style="color:#f0883e;font-size:10px">(incl. '+depsInExp.map(function(d){return esc(d.name);}).join(', ')+')</span>');
+      if(m.isDependent){
+        // Show the expense name but mark cost as bundled into guardian
+        lineAmt=0;
+        note=' <span style="font-size:9px;color:#f0883e">('+L.bundled+')</span>';
+      }else{
+        lineAmt=(e.customShares&&e.customShares[p.id])||0;
+        // Note if any dependents are included in this guardian amount
+        var depsInExp=deps.filter(function(d){
+          var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
+          return raw.indexOf(d.id)!==-1;
+        });
+        if(depsInExp.length){
+          note=' <span style="font-size:9px;color:#f0883e">(incl. '+depsInExp.map(function(d){return esc(d.name);}).join(', ')+')</span>';
+        }
+      }
     }else{
       var cnt=shareCount(e,people);
       var ts=Object.values(cnt).reduce(function(a,n){return a+n;},0);
-      share=ts>0?e.amount/ts:0;
+      lineAmt=ts>0?e.amount/ts:0;
     }
-    if(share<=0)return;
-    html+='<div style="display:flex;justify-content:space-between;font-size:11px;color:#4a6a88;padding:3px 0;border-top:1px solid #1a2434">';
-    html+='<span>'+ee(e.desc)+' '+label+'</span>';
-    html+='<span style="color:#dce6f0;font-weight:700">'+fmt(share)+'</span>';
+    html+='<div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#4a6a88;padding:3px 0;border-top:1px solid #1a2434">';
+    html+='<span>'+ee(e.desc)+' '+esc(e.desc)+note+'</span>';
+    html+='<span style="color:'+(lineAmt>0?'#dce6f0':'#3a5a78')+';font-weight:700">'+(lineAmt>0?fmt(lineAmt):'-')+'</span>';
     html+='</div>';
   });
   html+='</div>';
@@ -531,13 +535,16 @@ allMembers.forEach(function(m){
 
 // Group total footer
 html+='<div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid #1e2a38;margin-top:4px">';
-html+='<span style="font-size:12px;color:#3a5a78;font-weight:800">Total'+(deps.length?' ('+esc(p.name)+' + '+deps.map(function(d){return esc(d.name);}).join(' + ')+')':'')+'</span>';
+html+='<span style="font-size:12px;color:#3a5a78;font-weight:800">'+L.perPersonTotal;
+if(deps.length)html+=' ('+esc(p.name)+' + '+deps.map(function(d){return esc(d.name);}).join(' + ')+')';
+html+='</span>';
 html+='<span style="font-family:Fredoka One,cursive;font-size:16px;color:#4a9eff">'+fmt(groupTotal)+'</span>';
 html+='</div>';
 html+='</div>';
 ```
 
 });
+
 html+=’</div>’;
 return html;
 }
@@ -621,7 +628,12 @@ var rPeople=adults.filter(function(p){return resolvedIds.indexOf(p.id)!==-1;});
 var used=rPeople.reduce(function(s,p){return s+parseFloat(S.customShares[p.id]||0);},0);
 var rem=parseFloat(S.expAmount||0)-used;
 var html=’<div style="margin-top:10px;background:#0b0f14;border-radius:10px;padding:12px;border:1px solid #1e2a38"><div style="font-size:12px;color:#6b8aa8;font-weight:700;margin-bottom:8px">’+L.enterShares+’</div>’;
-rPeople.forEach(function(p){html+=’<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="font-size:13px;font-weight:700;flex:1">’+esc(p.name)+’</div><div style="display:flex;align-items:center;gap:4px"><span style="color:#3a5a78;font-size:13px">Rs.</span><input class="inp custom-share-inp" data-pid="'+p.id+'" value="'+esc(S.customShares[p.id]||'')+'" type="number" placeholder="0" style="width:90px;padding:6px 10px;text-align:right"/></div></div>’;});
+rPeople.forEach(function(p){
+// Show which dependents are included under this guardian
+var depsUnder=people.filter(function(d){return d.isDependent&&d.guardianId===p.id&&S.expParticipants.indexOf(d.id)!==-1;});
+var label=esc(p.name)+(depsUnder.length?’ (+’+depsUnder.map(function(d){return esc(d.name);}).join(’, ‘)+’)’:’’);
+html+=’<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="font-size:13px;font-weight:700;flex:1">’+label+’</div><div style="display:flex;align-items:center;gap:4px"><span style="color:#3a5a78;font-size:13px">Rs.</span><input class="inp custom-share-inp" data-pid="'+p.id+'" value="'+esc(S.customShares[p.id]||'')+'" type="number" placeholder="0" style="width:90px;padding:6px 10px;text-align:right"/></div></div>’;
+});
 html+=’<div style="display:flex;justify-content:space-between;font-size:12px;padding-top:8px;border-top:1px solid #1e2a38;margin-top:4px"><span style="color:#6b8aa8">’+L.remaining+’</span><span id="rem-amt" style="font-weight:800;color:'+(Math.abs(rem)<0.01?'#3fb950':rem<0?'#f85149':'#f0883e')+'">’+fmt(rem)+’</span></div></div>’;
 container.innerHTML=html;
 container.querySelectorAll(’.custom-share-inp’).forEach(function(inp){inp.addEventListener(‘input’,function(e){S.customShares[inp.dataset.pid]=e.target.value;var used2=rPeople.reduce(function(s,p){return s+parseFloat(S.customShares[p.id]||0);},0);var rem2=parseFloat(S.expAmount||0)-used2;var el=document.getElementById(‘rem-amt’);if(el){el.textContent=fmt(rem2);el.style.color=Math.abs(rem2)<0.01?’#3fb950’:rem2<0?’#f85149’:’#f0883e’;}});});
