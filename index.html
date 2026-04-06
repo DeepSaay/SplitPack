@@ -50,9 +50,9 @@ import{getFirestore,doc,setDoc,onSnapshot,getDoc}from"https://www.gstatic.com/fi
 var app=initializeApp({apiKey:"AIzaSyDMN8q8zQm76B68wJShpc1BafU7rCWLpuE",authDomain:"splitpack-7c1a4.firebaseapp.com",projectId:"splitpack-7c1a4",storageBucket:"splitpack-7c1a4.firebasestorage.app",messagingSenderId:"189484190941",appId:"1:189484190941:web:704c5cac39e91052ec9f34"});
 var db=getFirestore(app);
 var T={
-en:{appTagline:"Fair splits - Happy trips - Zero drama",yourName:"Your name on this device",newTrip:"✈️ New Trip",joinTrip:"🔑 Join Trip",nameAdventure:"🗺 Name your adventure",tripPlaceholder:"e.g. Goa 2025",create:"🚀 Create",enterCode:"🔑 Enter code",codePlaceholder:"e.g. GOA25X",join:"Join",joining:"Joining...",noTrips:"No trips yet. Create or join one above!",shareCode:"Share code",owner:"👑 Owner",toReview:"to review",crew:"👥 Crew",expenses:"💸 Expenses",settleUp:"🧮 Settle Up",addMember:"➕ Add Member",namePlaceholder:"Name...",dependent:"👶 Dependent (non-paying)",assignGuardian:"Assign guardian",addToCrew:"Add to Crew",photoTip:"Tap edit to add photo and UPI",paying:"paying",billedUnder:"Billed under",guardianOf:"Guardian of",newExpense:"💸 New Expense",whatWasIt:"What was it?",totalAmount:"Total Amount (Rs.)",whoPaid:"Who paid?",equalSplit:"⚖️ Equal Split",customAmounts:"✏️ Custom Amounts",whoConsumed:"Who consumed?",whoConsumedCustom:"Who consumed? (select to enter amounts)",deselectAll:"Deselect All",selectAll:"Select All",enterShares:"Enter each persons share:",remaining:"Remaining unallocated",saveExpense:"Save Expense",addExpense:"+ Add Expense",noExpenses:"No expenses yet 🎉",paidBy:"Paid by",addedBy:"Added by",customSplit:"Custom split",equalSplitLabel:"Equal split",reviewed:"✅ Reviewed",pending:"⏳ Pending",review:"✅ Review",balanceSummary:"Balance Summary",getsBack:"gets back",owes:"owes",settled:"settled ✅",paymentsNeeded:"Payment(s) needed",allSettled:"✅ All Settled!",pays:"pays",payViaUPI:"💳 Pay via UPI:",exportPDF:"🧾 Export Trip Report",editMember:"✏️ Edit Member",profilePhoto:"Profile Photo",photoTipModal:"Tap to upload. Auto-cropped.",remove:"Remove",upiOptional:"(optional)",save:"Save",cancel:"Cancel",leave:"🚪 Leave",deleteTrip:"Delete this trip for everyone?",leaveTrip:"Leave this trip?",total:"Total",trips:"Trips",members:"members",paying2:"paying",synced:"Real-time sync - Share code to invite friends",youAre:"You:",perPersonSummary:"Per Person Summary",perPersonTotal:"Total",bundled:"bundled in guardian",expCategories:{food:"🍕 Food and Drinks",transport:"🚕 Transport",hotel:"🏨 Hotel / Stay",fuel:"⛽ Fuel",activities:"🎢 Activities",shopping:"🛒 Shopping",other:"🎑 Other"}},
-hi:{appTagline:"उचित बंटवारा - खुशहाल यात्रा - झंझट नहीं",yourName:"इस डिवाइस पर आपका नाम",newTrip:"✈️ नई यात्रा",joinTrip:"🔑 यात्रा जोड़ें",nameAdventure:"🗺 यात्रा का नाम",tripPlaceholder:"जैसे गोवा 2025",create:"🚀 बनाएं",enterCode:"🔑 कोड डालें",codePlaceholder:"जैसे GOA25X",join:"जोड़ें",joining:"जोड़ा जा रहा है...",noTrips:"अभी कोई यात्रा नहीं। ऊपर बनाएं या जोड़ें!",shareCode:"शेयर कोड",owner:"👑 मालिक",toReview:"समीक्षा के लिए",crew:"👥 दल",expenses:"💸 खर्च",settleUp:"🧮 हिसाब",addMember:"➕ सदस्य जोड़ें",namePlaceholder:"नाम...",dependent:"👶 आश्रित (भुगतान नहीं)",assignGuardian:"अभिभावक चुनें",addToCrew:"दल में जोड़ें",photoTip:"फोटो और UPI के लिए ✏️ दबाएं",paying:"भुगतानकर्ता",billedUnder:"खाता:",guardianOf:"अभिभावक:",newExpense:"💸 नया खर्च",whatWasIt:"क्या खरीदा?",totalAmount:"कुल राशि",whoPaid:"किसने भुगतान किया?",equalSplit:"⚖️ बराबर बांटें",customAmounts:"✏️ अलग-अलग राशि",whoConsumed:"किसने लिया?",whoConsumedCustom:"किसने लिया? (राशि दर्ज करें)",deselectAll:"सभी हटाएं",selectAll:"सभी चुनें",enterShares:"प्रत्येक की राशि दर्ज करें:",remaining:"शेष राशि",saveExpense:"खर्च सहेजें",addExpense:"+ खर्च जोड़ें",noExpenses:"अभी कोई खर्च नहीं 🎉",paidBy:"भुगतान:",addedBy:"जोड़ा:",customSplit:"अलग बंटवारा",equalSplitLabel:"बराबर बंटवारा",reviewed:"✅ समीक्षित",pending:"⏳ लंबित",review:"✅ समीक्षा करें",balanceSummary:"बैलेंस सारांश",getsBack:"वापस मिलेगा",owes:"देना है",settled:"बराबर ✅",paymentsNeeded:"भुगतान बाकी",allSettled:"✅ सब बराबर!",pays:"देगा",payViaUPI:"💳 UPI से भुगतान करें:",exportPDF:"🧾 रिपोर्ट निर्यात करें",editMember:"✏️ सदस्य संपादित करें",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करें। अपने आप क्रॉप होगा।",remove:"हटाएं",upiOptional:"(वैकल्पिक)",save:"सहेजें",cancel:"रद्द करें",leave:"🚪 छोड़ें",deleteTrip:"सभी के लिए यह यात्रा हटाएं?",leaveTrip:"यह यात्रा छोड़ें?",total:"कुल",trips:"यात्रा",members:"सदस्य",paying2:"भुगतानकर्ता",synced:"लाइव सिंक - कोड शेयर करें",youAre:"आप:",perPersonSummary:"व्यक्ति अनुसार सारांश",perPersonTotal:"कुल",bundled:"अभिभावक में शामिल",expCategories:{food:"🍕 खाना-पीना",transport:"🚕 यातायात",hotel:"🏨 होटल / ठहराव",fuel:"⛽ ईंधन",activities:"🎢 गतिविधियां",shopping:"🛒 खरीदारी",other:"🎑 अन्य"}},
-mr:{appTagline:"योग्य वाटणी - आनंदी सहल - कटकट नाही",yourName:"या डिव्हाइसवर तुमचे नाव",newTrip:"✈️ नवीन सहल",joinTrip:"🔑 सहलमध्ये सामील व्हा",nameAdventure:"🗺 सहलीचे नाव",tripPlaceholder:"उदा. गोवा 2025",create:"🚀 तयार करा",enterCode:"🔑 कोड टाका",codePlaceholder:"उदा. GOA25X",join:"सामील व्हा",joining:"सामील होत आहे...",noTrips:"अजून कोणतीही सहल नाही. वर तयार करा किंवा सामील व्हा!",shareCode:"शेअर कोड",owner:"👑 मालक",toReview:"तपासणीसाठी",crew:"👥 गट",expenses:"💸 खर्च",settleUp:"🧮 हिशोब",addMember:"➕ सदस्य जोडा",namePlaceholder:"नाव...",dependent:"👶 अवलंबित (पैसे देत नाही)",assignGuardian:"पालक निवडा",addToCrew:"गटात जोडा",photoTip:"फोटो व UPI साठी ✏️ दाबा",paying:"पैसे देणारे",billedUnder:"खाते:",guardianOf:"पालक:",newExpense:"💸 नवीन खर्च",whatWasIt:"काय विकत घेतले?",totalAmount:"एकूण रक्कम",whoPaid:"कोणी पैसे दिले?",equalSplit:"⚖️ समान वाटणी",customAmounts:"✏️ वेगळ्या रकमा",whoConsumed:"कोणी घेतले?",whoConsumedCustom:"कोणी घेतले? (रक्कम टाका)",deselectAll:"सर्व काढा",selectAll:"सर्व निवडा",enterShares:"प्रत्येकाची रक्कम टाका:",remaining:"उर्वरित रक्कम",saveExpense:"खर्च जतन करा",addExpense:"+ खर्च जोडा",noExpenses:"अजून कोणताही खर्च नाही 🎉",paidBy:"पैसे दिले:",addedBy:"जोडले:",customSplit:"वेगळी वाटणी",equalSplitLabel:"समान वाटणी",reviewed:"✅ तपासले",pending:"⏳ प्रलंबित",review:"✅ तपासा",balanceSummary:"शिल्लक सारांश",getsBack:"परत मिळेल",owes:"द्यायचे आहे",settled:"बरोबर ✅",paymentsNeeded:"देणी बाकी",allSettled:"✅ सर्व बरोबर!",pays:"देईल",payViaUPI:"💳 UPI ने द्या:",exportPDF:"🧾 अहवाल निर्यात करा",editMember:"✏️ सदस्य संपादित करा",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करा. आपोआप क्रॉप होईल.",remove:"काढा",upiOptional:"(पर्यायी)",save:"जतन करा",cancel:"रद्द करा",leave:"🚪 सोडा",deleteTrip:"सर्वांसाठी ही सहल हटवायची?",leaveTrip:"ही सहल सोडायची?",total:"एकूण",trips:"सहल",members:"सदस्य",paying2:"पैसे देणारे",synced:"थेट समक्रमण - कोड शेअर करा",youAre:"तुम्ही:",perPersonSummary:"व्यक्तीनुसार सारांश",perPersonTotal:"एकूण",bundled:"पालकात समाविष्ट",expCategories:{food:"🍕 खाणे-पिणे",transport:"🚕 वाहतूक",hotel:"🏨 हॉटेल / निवास",fuel:"⛽ इंधन",activities:"🎢 उपक्रम",shopping:"🛒 खरेदी",other:"🎑 इतर"}}
+en:{appTagline:"Fair splits - Happy trips - Zero drama",yourName:"Your name on this device",newTrip:"✈️ New Trip",joinTrip:"🔑 Join Trip",nameAdventure:"🗺 Name your adventure",tripPlaceholder:"e.g. Goa 2025",create:"🚀 Create",enterCode:"🔑 Enter code",codePlaceholder:"e.g. GOA25X",join:"Join",joining:"Joining...",noTrips:"No trips yet. Create or join one above!",shareCode:"Share code",owner:"👑 Owner",toReview:"to review",crew:"👥 Crew",expenses:"💸 Expenses",settleUp:"🧮 Settle Up",addMember:"➕ Add Member",namePlaceholder:"Name...",dependent:"👶 Dependent (non-paying)",assignGuardian:"Assign guardian",addToCrew:"Add to Crew",photoTip:"Tap edit to add photo and UPI",paying:"paying",billedUnder:"Billed under",guardianOf:"Guardian of",newExpense:"💸 New Expense",whatWasIt:"What was it?",totalAmount:"Total Amount (₹)",whoPaid:"Who paid?",equalSplit:"⚖️ Equal Split",customAmounts:"✏️ Custom Amounts",whoConsumed:"Who consumed?",whoConsumedCustom:"Who consumed? (select to enter amounts)",deselectAll:"Deselect All",selectAll:"Select All",enterShares:"Enter each persons share:",remaining:"Remaining unallocated",saveExpense:"Save Expense",addExpense:"+ Add Expense",noExpenses:"No expenses yet 🎉",paidBy:"Paid by",addedBy:"Added by",customSplit:"Custom split",equalSplitLabel:"Equal split",reviewed:"✅ Reviewed",pending:"⏳ Pending",review:"✅ Review",balanceSummary:"Balance Summary",getsBack:"gets back",owes:"owes",settled:"settled ✅",paymentsNeeded:"Payment(s) needed",allSettled:"✅ All Settled!",pays:"pays",payViaUPI:"💳 Pay via UPI:",exportPDF:"🧾 Export Trip Report",editMember:"✏️ Edit Member",profilePhoto:"Profile Photo",photoTipModal:"Tap to upload. Auto-cropped.",remove:"Remove",upiOptional:"(optional)",save:"Save",cancel:"Cancel",leave:"🚪 Leave",deleteTrip:"Delete this trip for everyone?",leaveTrip:"Leave this trip?",total:"Total",trips:"Trips",members:"members",paying2:"paying",synced:"Real-time sync - Share code to invite friends",youAre:"You:",expCategories:{food:"🍕 Food and Drinks",transport:"🚕 Transport",hotel:"🏨 Hotel / Stay",fuel:"⛽ Fuel",activities:"🎢 Activities",shopping:"🛒 Shopping",other:"🎑 Other"}},
+hi:{appTagline:"उचित बंटवारा - खुशहाल यात्रा - झंझट नहीं",yourName:"इस डिवाइस पर आपका नाम",newTrip:"✈️ नई यात्रा",joinTrip:"🔑 यात्रा जोड़ें",nameAdventure:"🗺 यात्रा का नाम",tripPlaceholder:"जैसे गोवा 2025",create:"🚀 बनाएं",enterCode:"🔑 कोड डालें",codePlaceholder:"जैसे GOA25X",join:"जोड़ें",joining:"जोड़ा जा रहा है...",noTrips:"अभी कोई यात्रा नहीं। ऊपर बनाएं या जोड़ें!",shareCode:"शेयर कोड",owner:"👑 मालिक",toReview:"समीक्षा के लिए",crew:"👥 दल",expenses:"💸 खर्च",settleUp:"🧮 हिसाब",addMember:"➕ सदस्य जोड़ें",namePlaceholder:"नाम...",dependent:"👶 आश्रित (भुगतान नहीं)",assignGuardian:"अभिभावक चुनें",addToCrew:"दल में जोड़ें",photoTip:"फोटो और UPI के लिए ✏️ दबाएं",paying:"भुगतानकर्ता",billedUnder:"खाता:",guardianOf:"अभिभावक:",newExpense:"💸 नया खर्च",whatWasIt:"क्या खरीदा?",totalAmount:"कुल राशि (₹)",whoPaid:"किसने भुगतान किया?",equalSplit:"⚖️ बराबर बांटें",customAmounts:"✏️ अलग-अलग राशि",whoConsumed:"किसने लिया?",whoConsumedCustom:"किसने लिया? (राशि दर्ज करें)",deselectAll:"सभी हटाएं",selectAll:"सभी चुनें",enterShares:"प्रत्येक की राशि दर्ज करें:",remaining:"शेष राशि",saveExpense:"खर्च सहेजें",addExpense:"+ खर्च जोड़ें",noExpenses:"अभी कोई खर्च नहीं 🎉",paidBy:"भुगतान:",addedBy:"जोड़ा:",customSplit:"अलग बंटवारा",equalSplitLabel:"बराबर बंटवारा",reviewed:"✅ समीक्षित",pending:"⏳ लंबित",review:"✅ समीक्षा करें",balanceSummary:"बैलेंस सारांश",getsBack:"वापस मिलेगा",owes:"देना है",settled:"बराबर ✅",paymentsNeeded:"भुगतान बाकी",allSettled:"✅ सब बराबर!",pays:"देगा",payViaUPI:"💳 UPI से भुगतान करें:",exportPDF:"🧾 रिपोर्ट निर्यात करें",editMember:"✏️ सदस्य संपादित करें",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करें। अपने आप क्रॉप होगा।",remove:"हटाएं",upiOptional:"(वैकल्पिक)",save:"सहेजें",cancel:"रद्द करें",leave:"🚪 छोड़ें",deleteTrip:"सभी के लिए यह यात्रा हटाएं?",leaveTrip:"यह यात्रा छोड़ें?",total:"कुल",trips:"यात्रा",members:"सदस्य",paying2:"भुगतानकर्ता",synced:"लाइव सिंक - कोड शेयर करें",youAre:"आप:",expCategories:{food:"🍕 खाना-पीना",transport:"🚕 यातायात",hotel:"🏨 होटल / ठहराव",fuel:"⛽ ईंधन",activities:"🎢 गतिविधियां",shopping:"🛒 खरीदारी",other:"🎑 अन्य"}},
+mr:{appTagline:"योग्य वाटणी - आनंदी सहल - कटकट नाही",yourName:"या डिव्हाइसवर तुमचे नाव",newTrip:"✈️ नवीन सहल",joinTrip:"🔑 सहलमध्ये सामील व्हा",nameAdventure:"🗺 सहलीचे नाव",tripPlaceholder:"उदा. गोवा 2025",create:"🚀 तयार करा",enterCode:"🔑 कोड टाका",codePlaceholder:"उदा. GOA25X",join:"सामील व्हा",joining:"सामील होत आहे...",noTrips:"अजून कोणतीही सहल नाही. वर तयार करा किंवा सामील व्हा!",shareCode:"शेअर कोड",owner:"👑 मालक",toReview:"तपासणीसाठी",crew:"👥 गट",expenses:"💸 खर्च",settleUp:"🧮 हिशोब",addMember:"➕ सदस्य जोडा",namePlaceholder:"नाव...",dependent:"👶 अवलंबित (पैसे देत नाही)",assignGuardian:"पालक निवडा",addToCrew:"गटात जोडा",photoTip:"फोटो व UPI साठी ✏️ दाबा",paying:"पैसे देणारे",billedUnder:"खाते:",guardianOf:"पालक:",newExpense:"💸 नवीन खर्च",whatWasIt:"काय विकत घेतले?",totalAmount:"एकूण रक्कम (₹)",whoPaid:"कोणी पैसे दिले?",equalSplit:"⚖️ समान वाटणी",customAmounts:"✏️ वेगळ्या रकमा",whoConsumed:"कोणी घेतले?",whoConsumedCustom:"कोणी घेतले? (रक्कम टाका)",deselectAll:"सर्व काढा",selectAll:"सर्व निवडा",enterShares:"प्रत्येकाची रक्कम टाका:",remaining:"उर्वरित रक्कम",saveExpense:"खर्च जतन करा",addExpense:"+ खर्च जोडा",noExpenses:"अजून कोणताही खर्च नाही 🎉",paidBy:"पैसे दिले:",addedBy:"जोडले:",customSplit:"वेगळी वाटणी",equalSplitLabel:"समान वाटणी",reviewed:"✅ तपासले",pending:"⏳ प्रलंबित",review:"✅ तपासा",balanceSummary:"शिल्लक सारांश",getsBack:"परत मिळेल",owes:"द्यायचे आहे",settled:"बरोबर ✅",paymentsNeeded:"देणी बाकी",allSettled:"✅ सर्व बरोबर!",pays:"देईल",payViaUPI:"💳 UPI ने द्या:",exportPDF:"🧾 अहवाल निर्यात करा",editMember:"✏️ सदस्य संपादित करा",profilePhoto:"प्रोफाइल फोटो",photoTipModal:"अपलोड करा. आपोआप क्रॉप होईल.",remove:"काढा",upiOptional:"(पर्यायी)",save:"जतन करा",cancel:"रद्द करा",leave:"🚪 सोडा",deleteTrip:"सर्वांसाठी ही सहल हटवायची?",leaveTrip:"ही सहल सोडायची?",total:"एकूण",trips:"सहल",members:"सदस्य",paying2:"पैसे देणारे",synced:"थेट समक्रमण - कोड शेअर करा",youAre:"तुम्ही:",expCategories:{food:"🍕 खाणे-पिणे",transport:"🚕 वाहतूक",hotel:"🏨 हॉटेल / निवास",fuel:"⛽ इंधन",activities:"🎢 उपक्रम",shopping:"🛒 खरेदी",other:"🎑 इतर"}}
 };
 var LANG=localStorage.getItem('sp_lang')||'en';
 function t(){return T[LANG];}
@@ -81,377 +81,396 @@ async function dbJoin(code){
   var ts=await getDoc(tRef(s.data().tripId));
   return ts.exists()?ts.data():null;
 }
+
+// shareCount: each selected person = 1 share, rolled up to their guardian
 function shareCount(e,people){
-  var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
-  var cnt={};
-  raw.forEach(function(pid){
-    var p=people.find(function(x){return x.id===pid;});
-    if(!p){cnt[pid]=(cnt[pid]||0)+1;return;}
-    var aid=(p.isDependent&&p.guardianId)?p.guardianId:p.id;
-    cnt[aid]=(cnt[aid]||0)+1;
-  });
-  return cnt;
+var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
+var cnt={};
+raw.forEach(function(pid){
+var p=people.find(function(x){return x.id===pid;});
+if(!p){cnt[pid]=(cnt[pid]||0)+1;return;}
+// Each person counts as 1 share under their guardian (or themselves if independent)
+var aid=(p.isDependent&&p.guardianId)?p.guardianId:p.id;
+cnt[aid]=(cnt[aid]||0)+1;
+});
+return cnt;
 }
+
+// adultShare: guardian pays for themselves + all their dependants in this expense
 function adultShare(e,adultId,people){
-  if(e.splitMode==='custom')return(e.customShares&&e.customShares[adultId])||0;
-  var cnt=shareCount(e,people);
-  var total=Object.values(cnt).reduce(function(s,n){return s+n;},0);
-  if(!total)return 0;
-  return(e.amount/total)*((cnt[adultId])||0);
+if(e.splitMode===‘custom’)return(e.customShares&&e.customShares[adultId])||0;
+var cnt=shareCount(e,people);
+var total=Object.values(cnt).reduce(function(s,n){return s+n;},0);
+if(!total)return 0;
+// cnt[adultId] = 1 (solo) or 2+ (guardian with dependants)
+// Solo person only pays their own 1 share, never subsidises other families
+return(e.amount/total)*((cnt[adultId])||0);
 }
+
 function settle(adults,expenses,people){
-  var bal={};
-  adults.forEach(function(p){bal[p.id]=0;});
-  expenses.forEach(function(e){
-    bal[e.payerId]=(bal[e.payerId]||0)+e.amount;
-    adults.forEach(function(p){bal[p.id]=(bal[p.id]||0)-adultShare(e,p.id,people);});
-  });
-  var pos=[],neg=[];
-  Object.entries(bal).forEach(function(entry){
-    var id=entry[0],a=entry[1];
-    if(a>0.005)pos.push({id:id,a:a});
-    else if(a<-0.005)neg.push({id:id,a:-a});
-  });
-  var txns=[],i=0,j=0;
-  while(i<pos.length&&j<neg.length){
-    var s=Math.min(pos[i].a,neg[j].a);
-    txns.push({from:neg[j].id,to:pos[i].id,amount:s});
-    pos[i].a-=s;neg[j].a-=s;
-    if(pos[i].a<0.005)i++;
-    if(neg[j].a<0.005)j++;
-  }
-  return{bal:bal,txns:txns};
+var bal={};
+adults.forEach(function(p){bal[p.id]=0;});
+expenses.forEach(function(e){
+bal[e.payerId]=(bal[e.payerId]||0)+e.amount;
+adults.forEach(function(p){bal[p.id]=(bal[p.id]||0)-adultShare(e,p.id,people);});
+});
+var pos=[],neg=[];
+Object.entries(bal).forEach(function(entry){
+var id=entry[0],a=entry[1];
+if(a>0.005)pos.push({id:id,a:a});
+else if(a<-0.005)neg.push({id:id,a:-a});
+});
+var txns=[],i=0,j=0;
+while(i<pos.length&&j<neg.length){
+var s=Math.min(pos[i].a,neg[j].a);
+txns.push({from:neg[j].id,to:pos[i].id,amount:s});
+pos[i].a-=s;neg[j].a-=s;
+if(pos[i].a<0.005)i++;
+if(neg[j].a<0.005)j++;
 }
+return{bal:bal,txns:txns};
+}
+
 function exportReceipt(trip){
-  var L=t();
-  var adults=trip.people.filter(function(p){return !p.isDependent;});
-  var result=settle(adults,trip.expenses||[],trip.people);
-  var bal=result.bal,txns=result.txns;
-  var total=(trip.expenses||[]).reduce(function(s,e){return s+e.amount;},0);
-  function pName(id){var p=trip.people.find(function(p){return p.id===id;});return p?p.name:'?';}
-  var date=new Date(trip.createdAt).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
-  var now=new Date().toLocaleString('en-IN',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-  var rows='';
-  rows+='<tr><td style="padding:6px 8px;font-size:14px;color:#333">Trip</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111"><b>'+esc(trip.name)+'</b></td></tr>';
-  rows+='<tr><td style="padding:6px 8px;font-size:14px;color:#333">Date</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">'+date+'</td></tr>';
-  rows+='<tr><td style="padding:6px 8px;font-size:14px;color:#333">Code</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">'+sc(trip.id)+'</td></tr>';
-  rows+='<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>';
-  rows+='<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">EXPENSES</td></tr>';
-  (trip.expenses||[]).forEach(function(e){
-    rows+='<tr><td style="padding:6px 8px;font-size:14px;color:#333">'+esc(e.desc)+'</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">'+fmt(e.amount)+'</td></tr>';
-    rows+='<tr><td colspan="2" style="padding:2px 8px;font-size:11px;color:#888">Paid by '+esc(pName(e.payerId))+' - '+(e.reviewed?'Reviewed':'Pending')+'</td></tr>';
-  });
-  rows+='<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>';
-  rows+='<tr><td colspan="2" style="padding:8px;text-align:center;font-size:18px;font-weight:900">TOTAL: '+fmt(total)+'</td></tr>';
-  rows+='<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>';
-  rows+='<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">BALANCES</td></tr>';
-  adults.forEach(function(p){
-    var b=bal[p.id]||0;
-    var deps=trip.people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
-    var color=b>0?'#1a7a3a':b<0?'#c0392b':'#888';
-    var label=b===0?'Settled':fmt(Math.abs(b))+' '+(b>0?L.getsBack:L.owes);
-    rows+='<tr><td style="padding:6px 8px;font-size:14px">'+esc(p.name)+(deps.length?' (+'+deps.map(function(d){return esc(d.name);}).join(', ')+')':'')+'</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:'+color+';font-size:14px">'+label+'</td></tr>';
-    if(p.upi)rows+='<tr><td colspan="2" style="padding:2px 8px;font-size:11px;color:#888">UPI: '+esc(p.upi)+'</td></tr>';
-  });
-  if(txns.length){
-    rows+='<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>';
-    rows+='<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">SETTLE UP</td></tr>';
-    txns.forEach(function(tx){
-      var toP=trip.people.find(function(p){return p.id===tx.to;});
-      rows+='<tr><td colspan="2" style="padding:8px;background:#f8f8f8"><b style="color:#c0392b">'+esc(pName(tx.from))+'</b> pays <b style="color:#1a7a3a">'+esc(pName(tx.to))+'</b> - <b>'+fmt(tx.amount)+'</b>'+(toP&&toP.upi?'<br/><span style="font-size:12px;color:#2980b9">UPI: '+esc(toP.upi)+'</span>':'')+'</td></tr>';
-    });
-  }
-  var html='<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>SplitPack - '+esc(trip.name)+'</title><style>body{background:#f0f0f0;display:flex;justify-content:center;padding:20px;font-family:Courier New,monospace}.receipt{background:#fff;width:100%;max-width:380px;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15)}.hdr{background:#0b0f14;color:#4a9eff;text-align:center;padding:24px 16px}.hdr h1{font-size:28px;letter-spacing:2px;margin:0}.hdr p{color:#3a5a78;font-size:12px;margin:4px 0 0}table{width:100%;border-collapse:collapse}.ftr{text-align:center;font-size:11px;color:#aaa;padding:16px;border-top:1px dashed #ddd}</style></head><body><div class="receipt"><div class="hdr"><h1>SPLITPACK</h1><p>Official Trip Receipt</p></div><table>'+rows+'</table><div class="ftr">SplitPack - '+now+'</div></div></body></html>';
-  var blob=new Blob([html],{type:'text/html'});
-  window.open(URL.createObjectURL(blob),'_blank');
+var L=t();
+var adults=trip.people.filter(function(p){return !p.isDependent;});
+var result=settle(adults,trip.expenses||[],trip.people);
+var bal=result.bal,txns=result.txns;
+var total=(trip.expenses||[]).reduce(function(s,e){return s+e.amount;},0);
+function pName(id){var p=trip.people.find(function(p){return p.id===id;});return p?p.name:’?’;}
+var date=new Date(trip.createdAt).toLocaleDateString(‘en-IN’,{day:‘numeric’,month:‘long’,year:‘numeric’});
+var now=new Date().toLocaleString(‘en-IN’,{day:‘numeric’,month:‘short’,year:‘numeric’,hour:‘2-digit’,minute:‘2-digit’});
+var rows=’’;
+rows+=’<tr><td style="padding:6px 8px;font-size:14px;color:#333">Trip</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111"><b>’+esc(trip.name)+’</b></td></tr>’;
+rows+=’<tr><td style="padding:6px 8px;font-size:14px;color:#333">Date</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">’+date+’</td></tr>’;
+rows+=’<tr><td style="padding:6px 8px;font-size:14px;color:#333">Code</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">’+sc(trip.id)+’</td></tr>’;
+rows+=’<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>’;
+rows+=’<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">EXPENSES</td></tr>’;
+(trip.expenses||[]).forEach(function(e){
+rows+=’<tr><td style="padding:6px 8px;font-size:14px;color:#333">’+esc(e.desc)+’</td><td style="padding:6px 8px;text-align:right;font-weight:700;font-size:14px;color:#111">’+fmt(e.amount)+’</td></tr>’;
+rows+=’<tr><td colspan="2" style="padding:2px 8px;font-size:11px;color:#888">Paid by ‘+esc(pName(e.payerId))+’ - ‘+(e.reviewed?‘Reviewed’:‘Pending’)+’</td></tr>’;
+});
+rows+=’<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>’;
+rows+=’<tr><td colspan="2" style="padding:8px;text-align:center;font-size:18px;font-weight:900">TOTAL: ‘+fmt(total)+’</td></tr>’;
+rows+=’<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>’;
+rows+=’<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">BALANCES</td></tr>’;
+adults.forEach(function(p){
+var b=bal[p.id]||0;
+var deps=trip.people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
+var color=b>0?’#1a7a3a’:b<0?’#c0392b’:’#888’;
+var label=b===0?‘Settled’:fmt(Math.abs(b))+’ ‘+(b>0?L.getsBack:L.owes);
+rows+=’<tr><td style="padding:6px 8px;font-size:14px">’+esc(p.name)+(deps.length?’ (+’+deps.map(function(d){return esc(d.name);}).join(’, ‘)+’)’:’’)+’</td><td style="padding:6px 8px;text-align:right;font-weight:700;color:'+color+';font-size:14px">’+label+’</td></tr>’;
+if(p.upi)rows+=’<tr><td colspan="2" style="padding:2px 8px;font-size:11px;color:#888">UPI: ‘+esc(p.upi)+’</td></tr>’;
+});
+if(txns.length){
+rows+=’<tr><td colspan="2"><hr style="border:none;border-top:1px dashed #ccc;margin:4px 0"/></td></tr>’;
+rows+=’<tr><td colspan="2" style="padding:10px 8px 4px;font-size:11px;font-weight:900;text-transform:uppercase;color:#555">SETTLE UP</td></tr>’;
+txns.forEach(function(tx){
+var toP=trip.people.find(function(p){return p.id===tx.to;});
+rows+=’<tr><td colspan="2" style="padding:8px;background:#f8f8f8"><b style="color:#c0392b">’+esc(pName(tx.from))+’</b> pays <b style="color:#1a7a3a">’+esc(pName(tx.to))+’</b> - <b>’+fmt(tx.amount)+’</b>’+(toP&&toP.upi?’<br/><span style="font-size:12px;color:#2980b9">UPI: ‘+esc(toP.upi)+’</span>’:’’)+’</td></tr>’;
+});
 }
+var html=’<!DOCTYPE html><html><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>SplitPack - ‘+esc(trip.name)+’</title><style>body{background:#f0f0f0;display:flex;justify-content:center;padding:20px;font-family:Courier New,monospace}.receipt{background:#fff;width:100%;max-width:380px;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.15)}.hdr{background:#0b0f14;color:#4a9eff;text-align:center;padding:24px 16px}.hdr h1{font-size:28px;letter-spacing:2px;margin:0}.hdr p{color:#3a5a78;font-size:12px;margin:4px 0 0}table{width:100%;border-collapse:collapse}.ftr{text-align:center;font-size:11px;color:#aaa;padding:16px;border-top:1px dashed #ddd}</style></head><body><div class="receipt"><div class="hdr"><h1>SPLITPACK</h1><p>Official Trip Receipt</p></div><table>’+rows+’</table><div class="ftr">SplitPack - ‘+now+’</div></div></body></html>’;
+var blob=new Blob([html],{type:‘text/html’});
+window.open(URL.createObjectURL(blob),’_blank’);
+}
+
 async function compress(file){
-  return new Promise(function(res){
-    var r=new FileReader();
-    r.onload=function(e){
-      var img=new Image();
-      img.onload=function(){
-        var SIZE=80,c=document.createElement('canvas');
-        c.width=SIZE;c.height=SIZE;
-        var cx=c.getContext('2d'),s=Math.min(img.width,img.height);
-        cx.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,SIZE,SIZE);
-        res(c.toDataURL('image/jpeg',.7));
-      };
-      img.src=e.target.result;
-    };
-    r.readAsDataURL(file);
-  });
+return new Promise(function(res){
+var r=new FileReader();
+r.onload=function(e){
+var img=new Image();
+img.onload=function(){
+var SIZE=80,c=document.createElement(‘canvas’);
+c.width=SIZE;c.height=SIZE;
+var cx=c.getContext(‘2d’),s=Math.min(img.width,img.height);
+cx.drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,SIZE,SIZE);
+res(c.toDataURL(‘image/jpeg’,.7));
+};
+img.src=e.target.result;
+};
+r.readAsDataURL(file);
+});
 }
+
 function avHtml(p,sz){
-  if(!p)return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:#1e2a38;flex-shrink:0"></div>';
-  return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid #1e2a38;overflow:hidden;background:#1a2434;display:flex;align-items:center;justify-content:center;font-size:'+(sz*.5)+'px;flex-shrink:0">'+(p.photo?'<img src="'+p.photo+'" style="width:100%;height:100%;object-fit:cover"/>':(p.isDependent?'👶':av(p.name)))+'</div>';
+if(!p)return ‘<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:#1e2a38;flex-shrink:0"></div>’;
+return ‘<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid #1e2a38;overflow:hidden;background:#1a2434;display:flex;align-items:center;justify-content:center;font-size:'+(sz*.5)+'px;flex-shrink:0">’+(p.photo?’<img src="'+p.photo+'" style="width:100%;height:100%;object-fit:cover"/>’:(p.isDependent?‘👶’:av(p.name)))+’</div>’;
 }
-var S={trips:{},myIds:[],loading:true,activeTripId:null,tab:'people',showNewTrip:false,newTripName:'',showJoin:false,joinCode:'',joinError:'',joining:false,editTripName:false,tempTripName:'',newName:'',isDependent:false,guardianId:'',showExpForm:false,expDesc:'',expAmount:'',expPayer:'',expParticipants:[],splitMode:'equal',customShares:{},editingPerson:null,editingMe:false,tempMe:''};
+
+var S={trips:{},myIds:[],loading:true,activeTripId:null,tab:‘people’,showNewTrip:false,newTripName:’’,showJoin:false,joinCode:’’,joinError:’’,joining:false,editTripName:false,tempTripName:’’,newName:’’,isDependent:false,guardianId:’’,showExpForm:false,expDesc:’’,expAmount:’’,expPayer:’’,expParticipants:[],splitMode:‘equal’,customShares:{},editingPerson:null,editingMe:false,tempMe:’’};
 var uns={};
 function setState(p){S=Object.assign({},S,p);render();}
 function getTrip(){return S.trips[S.activeTripId]||null;}
 function subTrip(id){
-  if(uns[id])return;
-  uns[id]=onSnapshot(tRef(id),function(snap){
-    if(snap.exists()){S.trips=Object.assign({},S.trips);S.trips[id]=snap.data();render();}
-  });
+if(uns[id])return;
+uns[id]=onSnapshot(tRef(id),function(snap){
+if(snap.exists()){S.trips=Object.assign({},S.trips);S.trips[id]=snap.data();render();}
+});
 }
 function boot(){var ids=getIds();S.myIds=ids;ids.forEach(function(id){subTrip(id);});S.loading=false;render();}
 function resolveP(ids,people){
-  var out=[];
-  ids.forEach(function(id){
-    var p=people.find(function(x){return x.id===id;});
-    if(p){
-      var aid=p.isDependent?p.guardianId:p.id;
-      if(out.indexOf(aid)===-1)out.push(aid);
-    }
-  });
-  return out;
+var out=[];
+ids.forEach(function(id){
+var p=people.find(function(x){return x.id===id;});
+if(p){
+var aid=p.isDependent?p.guardianId:p.id;
+if(out.indexOf(aid)===-1)out.push(aid);
+}
+});
+return out;
 }
 function render(){
-  var el=document.getElementById('app');
-  if(!el)return;
-  if(S.loading){el.innerHTML='<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px"><div style="font-size:48px">🎒</div><div style="font-family:Fredoka One,cursive;font-size:20px;color:#4a9eff">Loading...</div></div>';return;}
-  if(!S.activeTripId){el.innerHTML=renderHome();bindHome();return;}
-  var tr=getTrip();if(!tr){setState({activeTripId:null});return;}
-  el.innerHTML=renderTrip(tr);bindTrip(tr);
+var el=document.getElementById(‘app’);
+if(!el)return;
+if(S.loading){el.innerHTML=’<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px"><div style="font-size:48px">🎒</div><div style="font-family:Fredoka One,cursive;font-size:20px;color:#4a9eff">Loading…</div></div>’;return;}
+if(!S.activeTripId){el.innerHTML=renderHome();bindHome();return;}
+var tr=getTrip();if(!tr){setState({activeTripId:null});return;}
+el.innerHTML=renderTrip(tr);bindTrip(tr);
 }
 function langSel(){
-  return '<div style="display:flex;gap:6px;justify-content:center;margin-bottom:20px">'
-    +'<button class="lang-btn'+(LANG==='en'?' active':'')+'" data-lang="en">🇬🇧 English</button>'
-    +'<button class="lang-btn'+(LANG==='hi'?' active':'')+'" data-lang="hi">🇮🇳 हिंदी</button>'
-    +'<button class="lang-btn'+(LANG==='mr'?' active':'')+'" data-lang="mr">🇮🇳 मराठी</button>'
-    +'</div>';
+return ‘<div style="display:flex;gap:6px;justify-content:center;margin-bottom:20px">’
++’<button class="lang-btn'+(LANG==='en'?' active':'')+'" data-lang="en">🇬🇧 English</button>’
++’<button class="lang-btn'+(LANG==='hi'?' active':'')+'" data-lang="hi">🇮🇳 हिंदी</button>’
++’<button class="lang-btn'+(LANG==='mr'?' active':'')+'" data-lang="mr">🇮🇳 मराठी</button>’
++’</div>’;
 }
 function renderHome(){
-  var L=t();
-  var trips=S.myIds.map(function(id){return S.trips[id];}).filter(Boolean);
-  var grand=trips.reduce(function(s,tr){return (tr.expenses||[]).reduce(function(a,e){return a+e.amount;},s);},0);
-  var html='<div style="max-width:600px;margin:0 auto;padding:20px 16px 80px">';
-  html+='<div style="text-align:center;padding:32px 0 16px"><div style="font-family:Fredoka One,cursive;font-size:42px;color:#4a9eff">🎒 SplitPack</div><div style="color:#2e4a64;font-size:14px;margin-top:6px;font-weight:600">'+L.appTagline+'</div></div>';
-  html+=langSel();
-  html+='<div class="card" style="margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1;min-width:0"><div class="label" style="margin-bottom:4px">'+L.yourName+'</div>'+(S.editingMe?'<input class="inp" id="me-inp" value="'+esc(S.tempMe)+'" style="font-size:14px"/>'  :'<div style="font-weight:800;font-size:16px">'+esc(ME)+'</div>')+'</div>'+(S.editingMe?'<button class="btn" id="btn-save-me" style="padding:8px 14px;background:#238636;color:#fff;font-size:13px;flex-shrink:0">'+L.save+'</button>':'<button class="pencil-btn" id="btn-edit-me" style="flex-shrink:0">Edit</button>')+'</div>';
-  html+='<div style="display:flex;gap:8px;margin-bottom:20px">';
-  if(S.showNewTrip){html+='<div class="card anim-pop" style="flex:1"><div style="font-family:Fredoka One,cursive;font-size:16px;color:#dce6f0;margin-bottom:10px">'+L.nameAdventure+'</div><input class="inp" id="new-trip-name" placeholder="'+L.tripPlaceholder+'" value="'+esc(S.newTripName)+'" style="margin-bottom:10px" autofocus/><div style="display:flex;gap:8px"><button class="btn" id="btn-create" style="flex:1;padding:10px;background:linear-gradient(135deg,#1254cc,#4a9eff);color:#fff;font-size:13px">'+L.create+'</button><button class="btn" id="btn-cancel-new" style="padding:10px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px">X</button></div></div>';}
-  else{html+='<button class="btn" id="btn-new" style="flex:1;padding:13px;background:linear-gradient(135deg,#1254cc,#4a9eff);color:#fff;font-size:14px;border-radius:12px">'+L.newTrip+'</button>';}
-  if(S.showJoin){html+='<div class="card anim-pop" style="flex:1"><div style="font-family:Fredoka One,cursive;font-size:16px;color:#dce6f0;margin-bottom:10px">'+L.enterCode+'</div><input class="inp" id="join-inp" placeholder="'+L.codePlaceholder+'" maxlength="6" value="'+esc(S.joinCode)+'" style="margin-bottom:6px;text-transform:uppercase;letter-spacing:3px;font-size:18px;text-align:center"/>'+(S.joinError?'<div style="color:#f85149;font-size:12px;margin-bottom:6px">'+esc(S.joinError)+'</div>':'')+'<div style="display:flex;gap:8px"><button class="btn" id="btn-do-join" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:13px">'+(S.joining?L.joining:L.join)+'</button><button class="btn" id="btn-cancel-join" style="padding:10px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px">X</button></div></div>';}
-  else{html+='<button class="btn" id="btn-join" style="flex:1;padding:13px;background:#0d1a10;color:#3fb950;font-size:14px;border-radius:12px;border:1.5px solid #238636">'+L.joinTrip+'</button>';}
-  html+='</div>';
-  if(trips.length===0){html+='<div style="text-align:center;color:#1e2e3e;padding:60px 0"><div style="font-size:60px;margin-bottom:14px">🧳</div><div style="font-size:15px;font-weight:700">'+L.noTrips+'</div></div>';}
-  else{
-    html+='<div class="label">'+trips.length+' '+L.trips+' - '+fmt(grand)+' '+L.total+'</div>';
-    trips.forEach(function(tr){
-      var tot=(tr.expenses||[]).reduce(function(s,e){return s+e.amount;},0);
-      var mc=tr.people?tr.people.length:0,ec=(tr.expenses||[]).length;
-      var date=new Date(tr.createdAt).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'2-digit'});
-      var pending=(tr.expenses||[]).filter(function(e){return !e.reviewed;}).length;
-      var isOwner=tr.ownerId===ME;
-      html+='<div class="trip-card anim-up" data-tid="'+tr.id+'">';
-      html+='<div style="display:flex;align-items:center;justify-content:space-between">';
-      html+='<div style="display:flex;gap:14px;align-items:center;flex:1;min-width:0">';
-      html+='<div style="width:54px;height:54px;border-radius:14px;background:#0d1420;border:1px solid #1e2a38;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#4a9eff;flex-shrink:0">'+cover(tr.name)+'</div>';
-      html+='<div style="min-width:0;flex:1"><div style="font-family:Fredoka One,cursive;font-size:19px;color:#dce6f0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(tr.name)+'</div>';
-      html+='<div style="font-size:12px;color:#2e4a64;margin-top:2px">'+date+' - '+mc+' '+L.members+' - '+ec+'</div>';
-      html+='<div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:5px"><span style="font-size:11px;color:#4a9eff;background:#4a9eff11;padding:2px 8px;border-radius:10px;border:1px solid #4a9eff33">'+L.shareCode+': <b>'+sc(tr.id)+'</b></span>';
-      if(isOwner)html+='<span style="font-size:11px;color:#f0883e;background:#f0883e11;padding:2px 8px;border-radius:10px;border:1px solid #f0883e33">'+L.owner+'</span>';
-      if(isOwner&&pending>0)html+='<span style="font-size:11px;color:#f85149;background:#f8514911;padding:2px 8px;border-radius:10px;border:1px solid #f8514933">'+pending+' '+L.toReview+'</span>';
-      html+='</div></div></div>';
-      html+='<div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-left:12px;flex-shrink:0"><div style="font-family:Fredoka One,cursive;font-size:18px;color:#3fb950">'+fmt(tot)+'</div>';
-      html+='<button class="btn btn-leave" data-tid="'+tr.id+'" data-owner="'+isOwner+'" style="padding:3px 10px;background:#1e2a38;color:#f85149;font-size:12px">'+(isOwner?'Delete':L.leave)+'</button></div></div></div>';
-    });
-  }
-  html+='</div><div style="position:fixed;bottom:0;left:0;right:0;background:#0f151d;border-top:1px solid #1a2434;padding:9px 16px;text-align:center;font-size:11px;color:#1e2e3e;font-weight:700">SplitPack - '+L.synced+'</div>';
-  return html;
+var L=t();
+var trips=S.myIds.map(function(id){return S.trips[id];}).filter(Boolean);
+var grand=trips.reduce(function(s,tr){return (tr.expenses||[]).reduce(function(a,e){return a+e.amount;},s);},0);
+var html=’<div style="max-width:600px;margin:0 auto;padding:20px 16px 80px">’;
+html+=’<div style="text-align:center;padding:32px 0 16px"><div style="font-family:Fredoka One,cursive;font-size:42px;color:#4a9eff">🎒 SplitPack</div><div style="color:#2e4a64;font-size:14px;margin-top:6px;font-weight:600">’+L.appTagline+’</div></div>’;
+html+=langSel();
+html+=’<div class="card" style="margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:12px"><div style="flex:1;min-width:0"><div class="label" style="margin-bottom:4px">’+L.yourName+’</div>’+(S.editingMe?’<input class="inp" id="me-inp" value="'+esc(S.tempMe)+'" style="font-size:14px"/>’  :’<div style="font-weight:800;font-size:16px">’+esc(ME)+’</div>’)+’</div>’+(S.editingMe?’<button class="btn" id="btn-save-me" style="padding:8px 14px;background:#238636;color:#fff;font-size:13px;flex-shrink:0">’+L.save+’</button>’:’<button class="pencil-btn" id="btn-edit-me" style="flex-shrink:0">Edit</button>’)+’</div>’;
+html+=’<div style="display:flex;gap:8px;margin-bottom:20px">’;
+if(S.showNewTrip){html+=’<div class="card anim-pop" style="flex:1"><div style="font-family:Fredoka One,cursive;font-size:16px;color:#dce6f0;margin-bottom:10px">’+L.nameAdventure+’</div><input class="inp" id="new-trip-name" placeholder="'+L.tripPlaceholder+'" value="'+esc(S.newTripName)+'" style="margin-bottom:10px" autofocus/><div style="display:flex;gap:8px"><button class="btn" id="btn-create" style="flex:1;padding:10px;background:linear-gradient(135deg,#1254cc,#4a9eff);color:#fff;font-size:13px">’+L.create+’</button><button class="btn" id="btn-cancel-new" style="padding:10px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px">X</button></div></div>’;}
+else{html+=’<button class="btn" id="btn-new" style="flex:1;padding:13px;background:linear-gradient(135deg,#1254cc,#4a9eff);color:#fff;font-size:14px;border-radius:12px">’+L.newTrip+’</button>’;}
+if(S.showJoin){html+=’<div class="card anim-pop" style="flex:1"><div style="font-family:Fredoka One,cursive;font-size:16px;color:#dce6f0;margin-bottom:10px">’+L.enterCode+’</div><input class="inp" id="join-inp" placeholder="'+L.codePlaceholder+'" maxlength="6" value="'+esc(S.joinCode)+'" style="margin-bottom:6px;text-transform:uppercase;letter-spacing:3px;font-size:18px;text-align:center"/>’+(S.joinError?’<div style="color:#f85149;font-size:12px;margin-bottom:6px">’+esc(S.joinError)+’</div>’:’’)+’<div style="display:flex;gap:8px"><button class="btn" id="btn-do-join" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:13px">’+(S.joining?L.joining:L.join)+’</button><button class="btn" id="btn-cancel-join" style="padding:10px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px">X</button></div></div>’;}
+else{html+=’<button class="btn" id="btn-join" style="flex:1;padding:13px;background:#0d1a10;color:#3fb950;font-size:14px;border-radius:12px;border:1.5px solid #238636">’+L.joinTrip+’</button>’;}
+html+=’</div>’;
+if(trips.length===0){html+=’<div style="text-align:center;color:#1e2e3e;padding:60px 0"><div style="font-size:60px;margin-bottom:14px">🧳</div><div style="font-size:15px;font-weight:700">’+L.noTrips+’</div></div>’;}
+else{
+html+=’<div class="label">’+trips.length+’ ‘+L.trips+’ - ‘+fmt(grand)+’ ‘+L.total+’</div>’;
+trips.forEach(function(tr){
+var tot=(tr.expenses||[]).reduce(function(s,e){return s+e.amount;},0);
+var mc=tr.people?tr.people.length:0,ec=(tr.expenses||[]).length;
+var date=new Date(tr.createdAt).toLocaleDateString(‘en-IN’,{day:‘numeric’,month:‘short’,year:‘2-digit’});
+var pending=(tr.expenses||[]).filter(function(e){return !e.reviewed;}).length;
+var isOwner=tr.ownerId===ME;
+html+=’<div class="trip-card anim-up" data-tid="'+tr.id+'">’;
+html+=’<div style="display:flex;align-items:center;justify-content:space-between">’;
+html+=’<div style="display:flex;gap:14px;align-items:center;flex:1;min-width:0">’;
+html+=’<div style="width:54px;height:54px;border-radius:14px;background:#0d1420;border:1px solid #1e2a38;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:#4a9eff;flex-shrink:0">’+cover(tr.name)+’</div>’;
+html+=’<div style="min-width:0;flex:1"><div style="font-family:Fredoka One,cursive;font-size:19px;color:#dce6f0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">’+esc(tr.name)+’</div>’;
+html+=’<div style="font-size:12px;color:#2e4a64;margin-top:2px">’+date+’ - ‘+mc+’ ‘+L.members+’ - ‘+ec+’</div>’;
+html+=’<div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:5px"><span style="font-size:11px;color:#4a9eff;background:#4a9eff11;padding:2px 8px;border-radius:10px;border:1px solid #4a9eff33">’+L.shareCode+’: <b>’+sc(tr.id)+’</b></span>’;
+if(isOwner)html+=’<span style="font-size:11px;color:#f0883e;background:#f0883e11;padding:2px 8px;border-radius:10px;border:1px solid #f0883e33">’+L.owner+’</span>’;
+if(isOwner&&pending>0)html+=’<span style="font-size:11px;color:#f85149;background:#f8514911;padding:2px 8px;border-radius:10px;border:1px solid #f8514933">’+pending+’ ‘+L.toReview+’</span>’;
+html+=’</div></div></div>’;
+html+=’<div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-left:12px;flex-shrink:0"><div style="font-family:Fredoka One,cursive;font-size:18px;color:#3fb950">’+fmt(tot)+’</div>’;
+html+=’<button class="btn btn-leave" data-tid="'+tr.id+'" data-owner="'+isOwner+'" style="padding:3px 10px;background:#1e2a38;color:#f85149;font-size:12px">’+(isOwner?‘Delete’:L.leave)+’</button></div></div></div>’;
+});
+}
+html+=’</div><div style="position:fixed;bottom:0;left:0;right:0;background:#0f151d;border-top:1px solid #1a2434;padding:9px 16px;text-align:center;font-size:11px;color:#1e2e3e;font-weight:700">SplitPack - ‘+L.synced+’</div>’;
+return html;
 }
 function bindHome(){
-  var L=t();
-  document.querySelectorAll('.lang-btn').forEach(function(b){b.addEventListener('click',function(){LANG=b.dataset.lang;localStorage.setItem('sp_lang',LANG);render();});});
-  var bEM=document.getElementById('btn-edit-me');if(bEM)bEM.addEventListener('click',function(){setState({editingMe:true,tempMe:ME});});
-  var mInp=document.getElementById('me-inp');if(mInp)mInp.addEventListener('input',function(e){S.tempMe=e.target.value;});
-  var bSM=document.getElementById('btn-save-me');if(bSM)bSM.addEventListener('click',function(){if(S.tempMe.trim()){ME=S.tempMe.trim();localStorage.setItem('sp_me',ME);}setState({editingMe:false});});
-  var bN=document.getElementById('btn-new');if(bN)bN.addEventListener('click',function(){setState({showNewTrip:true,showJoin:false});});
-  var bCN=document.getElementById('btn-cancel-new');if(bCN)bCN.addEventListener('click',function(){setState({showNewTrip:false,newTripName:''});});
-  var ntn=document.getElementById('new-trip-name');if(ntn){ntn.addEventListener('input',function(e){S.newTripName=e.target.value;});ntn.addEventListener('keydown',function(e){if(e.key==='Enter')createTrip();});}
-  var bC=document.getElementById('btn-create');if(bC)bC.addEventListener('click',createTrip);
-  var bJ=document.getElementById('btn-join');if(bJ)bJ.addEventListener('click',function(){setState({showJoin:true,showNewTrip:false,joinCode:'',joinError:''});});
-  var bCJ=document.getElementById('btn-cancel-join');if(bCJ)bCJ.addEventListener('click',function(){setState({showJoin:false});});
-  var jInp=document.getElementById('join-inp');if(jInp)jInp.addEventListener('input',function(e){S.joinCode=e.target.value.toUpperCase();});
-  var bDJ=document.getElementById('btn-do-join');if(bDJ)bDJ.addEventListener('click',doJoin);
-  document.querySelectorAll('.trip-card').forEach(function(el){el.addEventListener('click',function(){openTrip(el.dataset.tid);});});
-  document.querySelectorAll('.btn-leave').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();var isOwner=btn.dataset.owner==='true';if(isOwner){if(confirm(L.deleteTrip))delTrip(btn.dataset.tid);}else{if(confirm(L.leaveTrip))leaveTrip(btn.dataset.tid);}});});
+var L=t();
+document.querySelectorAll(’.lang-btn’).forEach(function(b){b.addEventListener(‘click’,function(){LANG=b.dataset.lang;localStorage.setItem(‘sp_lang’,LANG);render();});});
+var bEM=document.getElementById(‘btn-edit-me’);if(bEM)bEM.addEventListener(‘click’,function(){setState({editingMe:true,tempMe:ME});});
+var mInp=document.getElementById(‘me-inp’);if(mInp)mInp.addEventListener(‘input’,function(e){S.tempMe=e.target.value;});
+var bSM=document.getElementById(‘btn-save-me’);if(bSM)bSM.addEventListener(‘click’,function(){if(S.tempMe.trim()){ME=S.tempMe.trim();localStorage.setItem(‘sp_me’,ME);}setState({editingMe:false});});
+var bN=document.getElementById(‘btn-new’);if(bN)bN.addEventListener(‘click’,function(){setState({showNewTrip:true,showJoin:false});});
+var bCN=document.getElementById(‘btn-cancel-new’);if(bCN)bCN.addEventListener(‘click’,function(){setState({showNewTrip:false,newTripName:’’});});
+var ntn=document.getElementById(‘new-trip-name’);if(ntn){ntn.addEventListener(‘input’,function(e){S.newTripName=e.target.value;});ntn.addEventListener(‘keydown’,function(e){if(e.key===‘Enter’)createTrip();});}
+var bC=document.getElementById(‘btn-create’);if(bC)bC.addEventListener(‘click’,createTrip);
+var bJ=document.getElementById(‘btn-join’);if(bJ)bJ.addEventListener(‘click’,function(){setState({showJoin:true,showNewTrip:false,joinCode:’’,joinError:’’});});
+var bCJ=document.getElementById(‘btn-cancel-join’);if(bCJ)bCJ.addEventListener(‘click’,function(){setState({showJoin:false});});
+var jInp=document.getElementById(‘join-inp’);if(jInp)jInp.addEventListener(‘input’,function(e){S.joinCode=e.target.value.toUpperCase();});
+var bDJ=document.getElementById(‘btn-do-join’);if(bDJ)bDJ.addEventListener(‘click’,doJoin);
+document.querySelectorAll(’.trip-card’).forEach(function(el){el.addEventListener(‘click’,function(){openTrip(el.dataset.tid);});});
+document.querySelectorAll(’.btn-leave’).forEach(function(btn){btn.addEventListener(‘click’,function(e){e.stopPropagation();var isOwner=btn.dataset.owner===‘true’;if(isOwner){if(confirm(L.deleteTrip))delTrip(btn.dataset.tid);}else{if(confirm(L.leaveTrip))leaveTrip(btn.dataset.tid);}});});
 }
 function renderTrip(tr){
-  var L=t();
-  var tab=S.tab;
-  var people=tr.people||[],expenses=tr.expenses||[];
-  var adults=people.filter(function(p){return !p.isDependent;});
-  var total=expenses.reduce(function(s,e){return s+e.amount;},0);
-  var isOwner=tr.ownerId===ME;
-  var pending=expenses.filter(function(e){return !e.reviewed;}).length;
-  function pName(id){var p=people.find(function(p){return p.id===id;});return p?p.name:'?';}
-  var html='';
-  if(S.editingPerson)html+=renderEditModal(S.editingPerson,adults);
-  html+='<div style="background:#0f151d;border-bottom:1px solid #1a2434;padding:12px 16px;position:sticky;top:0;z-index:100"><div style="max-width:600px;margin:0 auto">';
-  html+='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">';
-  html+='<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0"><button class="btn" id="btn-home" style="padding:6px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px;flex-shrink:0">Back</button>';
-  if(S.editTripName)html+='<input class="inp" id="tname-inp" value="'+esc(S.tempTripName)+'" style="font-size:15px;padding:5px 10px"/>';
-  else html+='<div id="btn-edit-tname" style="font-family:Fredoka One,cursive;font-size:18px;color:#4a9eff;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(tr.name)+(isOwner?' (edit)':'')+'</div>';
-  html+='</div><div style="text-align:right;flex-shrink:0;margin-left:10px"><div style="font-size:10px;color:#2e4a64;font-weight:800;text-transform:uppercase">'+L.total+'</div><div style="font-family:Fredoka One,cursive;font-size:18px;color:#3fb950">'+fmt(total)+'</div></div></div>';
-  html+='<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap"><div style="background:#4a9eff0d;border:1px solid #4a9eff22;border-radius:10px;padding:5px 12px;font-size:12px;color:#4a6a88">'+L.shareCode+': <b style="color:#4a9eff;letter-spacing:2px">'+sc(tr.id)+'</b></div>';
-  if(isOwner&&pending>0)html+='<div style="background:#f8514911;border:1px solid #f8514933;border-radius:10px;padding:5px 12px;font-size:12px;color:#f85149"><b>'+pending+'</b> '+L.toReview+'</div>';
-  html+='</div>';
-  html+='<div style="display:flex;gap:5px;background:#0b0f14;border-radius:12px;padding:4px">';
-  [['people',L.crew],['expenses',L.expenses],['settle',L.settleUp]].forEach(function(pair){var k=pair[0],l=pair[1];html+='<button class="btn tab-btn" data-tab="'+k+'" style="flex:1;padding:8px 0;font-size:12px;background:'+(tab===k?'#4a9eff':'transparent')+';color:'+(tab===k?'#fff':'#3a5a78')+';border-radius:9px">'+l+'</button>';});
-  html+='</div></div></div>';
-  html+='<div style="max-width:600px;margin:0 auto;padding:16px 16px 80px">';
-  if(tab==='people')html+=tabPeople(people,adults);
-  if(tab==='expenses')html+=tabExpenses(people,adults,expenses,isOwner,pName);
-  if(tab==='settle')html+=tabSettle(tr,people,adults,expenses,pName);
-  html+='</div>';
-  html+='<div style="position:fixed;bottom:0;left:0;right:0;background:#0f151d;border-top:1px solid #1a2434;padding:9px 16px;text-align:center;font-size:11px;color:#1e2e3e;font-weight:700">SplitPack - '+L.youAre+' '+esc(ME)+' - '+(isOwner?L.owner:'Member')+'</div>';
-  return html;
+var L=t();
+var tab=S.tab;
+var people=tr.people||[],expenses=tr.expenses||[];
+var adults=people.filter(function(p){return !p.isDependent;});
+var total=expenses.reduce(function(s,e){return s+e.amount;},0);
+var isOwner=tr.ownerId===ME;
+var pending=expenses.filter(function(e){return !e.reviewed;}).length;
+function pName(id){var p=people.find(function(p){return p.id===id;});return p?p.name:’?’;}
+var html=’’;
+if(S.editingPerson)html+=renderEditModal(S.editingPerson,adults);
+html+=’<div style="background:#0f151d;border-bottom:1px solid #1a2434;padding:12px 16px;position:sticky;top:0;z-index:100"><div style="max-width:600px;margin:0 auto">’;
+html+=’<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">’;
+html+=’<div style="display:flex;align-items:center;gap:10px;flex:1;min-width:0"><button class="btn" id="btn-home" style="padding:6px 12px;background:#1e2a38;color:#6b8aa8;font-size:13px;flex-shrink:0">Back</button>’;
+if(S.editTripName)html+=’<input class="inp" id="tname-inp" value="'+esc(S.tempTripName)+'" style="font-size:15px;padding:5px 10px"/>’;
+else html+=’<div id="btn-edit-tname" style="font-family:Fredoka One,cursive;font-size:18px;color:#4a9eff;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">’+esc(tr.name)+(isOwner?’ (edit)’:’’)+’</div>’;
+html+=’</div><div style="text-align:right;flex-shrink:0;margin-left:10px"><div style="font-size:10px;color:#2e4a64;font-weight:800;text-transform:uppercase">’+L.total+’</div><div style="font-family:Fredoka One,cursive;font-size:18px;color:#3fb950">’+fmt(total)+’</div></div></div>’;
+html+=’<div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap"><div style="background:#4a9eff0d;border:1px solid #4a9eff22;border-radius:10px;padding:5px 12px;font-size:12px;color:#4a6a88">’+L.shareCode+’: <b style="color:#4a9eff;letter-spacing:2px">’+sc(tr.id)+’</b></div>’;
+if(isOwner&&pending>0)html+=’<div style="background:#f8514911;border:1px solid #f8514933;border-radius:10px;padding:5px 12px;font-size:12px;color:#f85149"><b>’+pending+’</b> ‘+L.toReview+’</div>’;
+html+=’</div>’;
+html+=’<div style="display:flex;gap:5px;background:#0b0f14;border-radius:12px;padding:4px">’;
+[[‘people’,L.crew],[‘expenses’,L.expenses],[‘settle’,L.settleUp]].forEach(function(pair){var k=pair[0],l=pair[1];html+=’<button class="btn tab-btn" data-tab="'+k+'" style="flex:1;padding:8px 0;font-size:12px;background:'+(tab===k?'#4a9eff':'transparent')+';color:'+(tab===k?'#fff':'#3a5a78')+';border-radius:9px">’+l+’</button>’;});
+html+=’</div></div></div>’;
+html+=’<div style="max-width:600px;margin:0 auto;padding:16px 16px 80px">’;
+if(tab===‘people’)html+=tabPeople(people,adults);
+if(tab===‘expenses’)html+=tabExpenses(people,adults,expenses,isOwner,pName);
+if(tab===‘settle’)html+=tabSettle(tr,people,adults,expenses,pName);
+html+=’</div>’;
+html+=’<div style="position:fixed;bottom:0;left:0;right:0;background:#0f151d;border-top:1px solid #1a2434;padding:9px 16px;text-align:center;font-size:11px;color:#1e2e3e;font-weight:700">SplitPack - ‘+L.youAre+’ ‘+esc(ME)+’ - ‘+(isOwner?L.owner:‘Member’)+’</div>’;
+return html;
 }
 function tabPeople(people,adults){
-  var L=t();
-  var html='<div class="anim-up"><div class="card" style="margin-bottom:14px">';
-  html+='<div style="font-weight:800;font-size:14px;margin-bottom:12px;color:#dce6f0">'+L.addMember+'</div>';
-  html+='<input class="inp" id="new-name" placeholder="'+L.namePlaceholder+'" value="'+esc(S.newName)+'" style="margin-bottom:10px"/>';
-  html+='<label style="display:flex;align-items:center;gap:8px;margin-bottom:10px;cursor:pointer;font-size:13px;color:#6b8aa8;user-select:none"><input type="checkbox" id="chk-dep" '+(S.isDependent?'checked':'')+' style="width:16px;height:16px;accent-color:#f0883e"/> '+L.dependent+'</label>';
-  if(S.isDependent){html+='<select class="inp" id="sel-guardian" style="margin-bottom:10px"><option value="">'+L.assignGuardian+'</option>';adults.forEach(function(a){html+='<option value="'+a.id+'"'+(S.guardianId===a.id?' selected':'')+'>'+esc(a.name)+'</option>';});html+='</select>';}
-  html+='<button class="btn" id="btn-add-person" style="width:100%;padding:10px;background:#238636;color:#fff;font-size:14px">'+L.addToCrew+'</button>';
-  html+='<div style="font-size:11px;color:#2e4a64;margin-top:8px;text-align:center">'+L.photoTip+'</div></div>';
-  if(people.length===0){html+='<div style="text-align:center;color:#1e2e3e;padding:40px 0;font-size:14px;font-weight:700">No crew yet</div>';}
-  else{
-    html+='<div class="label">'+people.length+' '+L.members+' - '+adults.length+' '+L.paying2+'</div>';
-    people.forEach(function(p){
-      var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
-      html+='<div class="card anim-pop" style="margin-bottom:10px;'+(p.isDependent?'border-color:#f0883e28':'')+'">';
-      html+='<div style="display:flex;align-items:center;justify-content:space-between">';
-      html+='<div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0">';
-      html+='<div class="av-btn" data-pid="'+p.id+'" style="position:relative;flex-shrink:0;cursor:pointer">'+avHtml(p,48)+'<div style="position:absolute;bottom:-2px;right:-2px;width:18px;height:18px;border-radius:50%;background:'+(p.isDependent?'#f0883e':'#4a9eff')+';display:flex;align-items:center;justify-content:center;font-size:9px;border:2px solid #131920;color:#fff;font-weight:800">E</div></div>';
-      html+='<div style="min-width:0;flex:1"><div style="font-weight:800;font-size:15px">'+esc(p.name)+'</div>';
-      if(p.upi)html+='<div style="font-size:11px;color:#4a9eff">UPI: '+esc(p.upi)+'</div>';
-      if(p.isDependent){var ga=adults.find(function(a){return a.id===p.guardianId;});html+='<div style="font-size:11px;color:#f0883e">'+L.billedUnder+' '+(ga?esc(ga.name):'?')+'</div>';}
-      if(deps.length)html+='<div style="font-size:11px;color:#f0883e">'+L.guardianOf+' '+deps.map(function(d){return esc(d.name);}).join(', ')+'</div>';
-      html+='</div></div>';
-      html+='<div style="display:flex;gap:6px;flex-shrink:0"><button class="pencil-btn av-btn" data-pid="'+p.id+'">Edit</button><button class="pencil-btn btn-del-person" data-pid="'+p.id+'" style="color:#f85149">Del</button></div>';
-      html+='</div></div>';
-    });
-  }
-  html+='</div>';
-  return html;
+var L=t();
+var html=’<div class="anim-up"><div class="card" style="margin-bottom:14px">’;
+html+=’<div style="font-weight:800;font-size:14px;margin-bottom:12px;color:#dce6f0">’+L.addMember+’</div>’;
+html+=’<input class="inp" id="new-name" placeholder="'+L.namePlaceholder+'" value="'+esc(S.newName)+'" style="margin-bottom:10px"/>’;
+html+=’<label style="display:flex;align-items:center;gap:8px;margin-bottom:10px;cursor:pointer;font-size:13px;color:#6b8aa8;user-select:none"><input type=“checkbox” id=“chk-dep” ‘+(S.isDependent?‘checked’:’’)+’ style=“width:16px;height:16px;accent-color:#f0883e”/> ‘+L.dependent+’</label>’;
+if(S.isDependent){html+=’<select class="inp" id="sel-guardian" style="margin-bottom:10px"><option value="">’+L.assignGuardian+’</option>’;adults.forEach(function(a){html+=’<option value=”’+a.id+’”’+(S.guardianId===a.id?’ selected’:’’)+’>’+esc(a.name)+’</option>’;});html+=’</select>’;}
+html+=’<button class="btn" id="btn-add-person" style="width:100%;padding:10px;background:#238636;color:#fff;font-size:14px">’+L.addToCrew+’</button>’;
+html+=’<div style="font-size:11px;color:#2e4a64;margin-top:8px;text-align:center">’+L.photoTip+’</div></div>’;
+if(people.length===0){html+=’<div style="text-align:center;color:#1e2e3e;padding:40px 0;font-size:14px;font-weight:700">No crew yet</div>’;}
+else{
+html+=’<div class="label">’+people.length+’ ‘+L.members+’ - ‘+adults.length+’ ‘+L.paying2+’</div>’;
+people.forEach(function(p){
+var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
+html+=’<div class="card anim-pop" style="margin-bottom:10px;'+(p.isDependent?'border-color:#f0883e28':'')+'">’;
+html+=’<div style="display:flex;align-items:center;justify-content:space-between">’;
+html+=’<div style="display:flex;align-items:center;gap:12px;flex:1;min-width:0">’;
+html+=’<div class="av-btn" data-pid="'+p.id+'" style="position:relative;flex-shrink:0;cursor:pointer">’+avHtml(p,48)+’<div style="position:absolute;bottom:-2px;right:-2px;width:18px;height:18px;border-radius:50%;background:'+(p.isDependent?'#f0883e':'#4a9eff')+';display:flex;align-items:center;justify-content:center;font-size:9px;border:2px solid #131920;color:#fff;font-weight:800">E</div></div>’;
+html+=’<div style="min-width:0;flex:1"><div style="font-weight:800;font-size:15px">’+esc(p.name)+’</div>’;
+if(p.upi)html+=’<div style="font-size:11px;color:#4a9eff">UPI: ‘+esc(p.upi)+’</div>’;
+if(p.isDependent){var ga=adults.find(function(a){return a.id===p.guardianId;});html+=’<div style="font-size:11px;color:#f0883e">’+L.billedUnder+’ ‘+(ga?esc(ga.name):’?’)+’</div>’;}
+if(deps.length)html+=’<div style="font-size:11px;color:#f0883e">’+L.guardianOf+’ ‘+deps.map(function(d){return esc(d.name);}).join(’, ‘)+’</div>’;
+html+=’</div></div>’;
+html+=’<div style="display:flex;gap:6px;flex-shrink:0"><button class="pencil-btn av-btn" data-pid="'+p.id+'">Edit</button><button class="pencil-btn btn-del-person" data-pid="'+p.id+'" style="color:#f85149">Del</button></div>’;
+html+=’</div></div>’;
+});
+}
+html+=’</div>’;
+return html;
 }
 function tabExpenses(people,adults,expenses,isOwner,pName){
-  var L=t();
-  var total=expenses.reduce(function(s,e){return s+e.amount;},0);
-  var cats=Object.values(L.expCategories);
-  var html='<div class="anim-up">';
-  if(S.showExpForm){
-    html+='<div class="card anim-pop" style="margin-bottom:14px">';
-    html+='<div style="font-weight:800;font-size:14px;margin-bottom:12px;color:#dce6f0">'+L.newExpense+'</div>';
-    html+='<input class="inp" id="exp-desc" placeholder="'+L.whatWasIt+'" value="'+esc(S.expDesc)+'" style="margin-bottom:8px"/>';
-    html+='<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">';
-    cats.forEach(function(c){html+='<button class="chip cat-chip" data-cat="'+esc(c)+'">'+c+'</button>';});
-    html+='</div>';
-    html+='<input class="inp" id="exp-amount" type="number" placeholder="'+L.totalAmount+'" value="'+esc(S.expAmount)+'" style="margin-bottom:10px"/>';
-    html+='<select class="inp" id="exp-payer" style="margin-bottom:10px"><option value="">'+L.whoPaid+'</option>';
-    adults.forEach(function(a){html+='<option value="'+a.id+'"'+(S.expPayer===a.id?' selected':'')+'>'+esc(a.name)+'</option>';});
-    html+='</select>';
-    html+='<div style="display:flex;gap:6px;margin-bottom:12px">';
-    html+='<button class="btn split-mode-btn" data-mode="equal" style="flex:1;padding:8px;font-size:13px;background:'+(S.splitMode==='equal'?'#4a9eff':'#1e2a38')+';color:'+(S.splitMode==='equal'?'#fff':'#6b8aa8')+'">'+L.equalSplit+'</button>';
-    html+='<button class="btn split-mode-btn" data-mode="custom" style="flex:1;padding:8px;font-size:13px;background:'+(S.splitMode==='custom'?'#f0883e':'#1e2a38')+';color:'+(S.splitMode==='custom'?'#fff':'#6b8aa8')+'">'+L.customAmounts+'</button>';
-    html+='</div>';
-    html+='<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:12px;color:#6b8aa8;font-weight:700">'+(S.splitMode==='custom'?L.whoConsumedCustom:L.whoConsumed)+'</span><button class="btn" id="btn-all" style="padding:3px 10px;background:#1e2a38;color:#4a9eff;font-size:12px">'+(S.expParticipants.length===people.length?L.deselectAll:L.selectAll)+'</button></div>';
-    html+='<div style="display:flex;flex-wrap:wrap;gap:7px">';
-    people.forEach(function(p){html+='<button class="chip'+(S.expParticipants.indexOf(p.id)!==-1?' on':'')+' chip-p" data-pid="'+p.id+'">'+(p.isDependent?'👶':av(p.name))+' '+esc(p.name)+'</button>';});
-    html+='</div><div id="share-preview" style="display:none"></div></div>';
-    html+='<div id="custom-rows-container"></div>';
-    html+='<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="btn-save-exp" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:14px">'+L.saveExpense+'</button><button class="btn" id="btn-cancel-exp" style="padding:10px 14px;background:#1e2a38;color:#6b8aa8;font-size:14px">X</button></div>';
-    html+='</div>';
-  }else{
-    html+='<button class="btn" id="btn-show-exp" style="width:100%;padding:13px;background:linear-gradient(135deg,#1a6630,#2ea043);color:#fff;font-size:15px;margin-bottom:14px;border-radius:12px">'+L.addExpense+'</button>';
-  }
-  if(expenses.length===0){html+='<div style="text-align:center;color:#1e2e3e;padding:40px 0;font-size:14px;font-weight:700">'+L.noExpenses+'</div>';}
-  else{
-    html+='<div class="label">'+expenses.length+' - '+fmt(total)+' '+L.total+'</div>';
-    expenses.slice().reverse().forEach(function(e){
-      var isCustom=e.splitMode==='custom';
-      var addedByMe=e.addedBy===ME;
-      var cnt=isCustom?null:shareCount(e,people);
-      var totalShares=cnt?Object.values(cnt).reduce(function(s,n){return s+n;},0):0;
-      var unit=(cnt&&totalShares)?e.amount/totalShares:0;
-      var splitDesc='';
-      if(isCustom){Object.entries(e.customShares||{}).forEach(function(entry,i){if(i>0)splitDesc+=' - ';splitDesc+=esc(pName(entry[0]))+': '+fmt(entry[1]);});}
-      else{Object.entries(cnt||{}).forEach(function(entry,i){if(i>0)splitDesc+=' - ';splitDesc+=esc(pName(entry[0]))+': '+fmt(unit*entry[1]);});}
-      html+='<div class="card anim-pop" style="margin-bottom:10px;'+(e.reviewed?'border-color:#3fb95028':'border-color:#f0883e28')+'">';
-      html+='<div style="display:flex;justify-content:space-between;align-items:flex-start">';
-      html+='<div style="display:flex;gap:12px;flex:1;min-width:0">';
-      html+='<div style="font-size:26px;line-height:1;flex-shrink:0;width:32px;text-align:center;">'+ee(e.desc)+'</div>';
-      html+='<div style="flex:1;min-width:0">';
-      html+='<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-weight:800;font-size:15px">'+esc(e.desc)+'</span>';
-      html+='<span style="font-size:10px;padding:2px 7px;border-radius:10px;font-weight:800;'+(e.reviewed?'background:#3fb95022;color:#3fb950;border:1px solid #3fb95044':'background:#f0883e22;color:#f0883e;border:1px solid #f0883e44')+'">'+(e.reviewed?L.reviewed:L.pending)+'</span>';
-      if(isCustom)html+='<span style="font-size:10px;padding:2px 7px;border-radius:10px;font-weight:800;background:#a66eff22;color:#a66eff;border:1px solid #a66eff44">Custom</span>';
-      html+='</div>';
-      html+='<div style="font-size:12px;color:#4a6a88;margin-top:2px">'+L.paidBy+' <span style="color:#4a9eff">'+esc(pName(e.payerId))+'</span> - '+L.addedBy+' <span style="color:#6b8aa8">'+esc(e.addedBy||'?')+'</span></div>';
-      html+='<div style="font-size:11px;color:#3fb950;margin-top:2px">'+splitDesc+'</div>';
-      html+='</div></div>';
-      html+='<div style="text-align:right;margin-left:10px;flex-shrink:0"><div style="font-family:Fredoka One,cursive;font-size:18px">'+fmt(e.amount)+'</div>';
-      html+='<div style="display:flex;gap:4px;margin-top:6px;justify-content:flex-end">';
-      if(isOwner&&!e.reviewed)html+='<button class="btn btn-review" data-eid="'+e.id+'" style="padding:3px 8px;background:#3fb95022;color:#3fb950;font-size:11px;border:1px solid #3fb95044">'+L.review+'</button>';
-      if(isOwner||addedByMe)html+='<button class="btn btn-del-exp" data-eid="'+e.id+'" style="padding:3px 8px;background:#1e2a38;color:#f85149;font-size:11px">Del</button>';
-      html+='</div></div></div></div>';
-    });
-  }
-  html+='</div>';
-  return html;
+var L=t();
+var total=expenses.reduce(function(s,e){return s+e.amount;},0);
+var cats=Object.values(L.expCategories);
+var html=’<div class="anim-up">’;
+if(S.showExpForm){
+html+=’<div class="card anim-pop" style="margin-bottom:14px">’;
+html+=’<div style="font-weight:800;font-size:14px;margin-bottom:12px;color:#dce6f0">’+L.newExpense+’</div>’;
+html+=’<input class="inp" id="exp-desc" placeholder="'+L.whatWasIt+'" value="'+esc(S.expDesc)+'" style="margin-bottom:8px"/>’;
+html+=’<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">’;
+cats.forEach(function(c){html+=’<button class="chip cat-chip" data-cat="'+esc(c)+'">’+c+’</button>’;});
+html+=’</div>’;
+html+=’<input class="inp" id="exp-amount" type="number" placeholder="'+L.totalAmount+'" value="'+esc(S.expAmount)+'" style="margin-bottom:10px"/>’;
+html+=’<select class="inp" id="exp-payer" style="margin-bottom:10px"><option value="">’+L.whoPaid+’</option>’;
+adults.forEach(function(a){html+=’<option value=”’+a.id+’”’+(S.expPayer===a.id?’ selected’:’’)+’>’+esc(a.name)+’</option>’;});
+html+=’</select>’;
+html+=’<div style="display:flex;gap:6px;margin-bottom:12px">’;
+html+=’<button class="btn split-mode-btn" data-mode="equal" style="flex:1;padding:8px;font-size:13px;background:'+(S.splitMode==='equal'?'#4a9eff':'#1e2a38')+';color:'+(S.splitMode==='equal'?'#fff':'#6b8aa8')+'">’+L.equalSplit+’</button>’;
+html+=’<button class="btn split-mode-btn" data-mode="custom" style="flex:1;padding:8px;font-size:13px;background:'+(S.splitMode==='custom'?'#f0883e':'#1e2a38')+';color:'+(S.splitMode==='custom'?'#fff':'#6b8aa8')+'">’+L.customAmounts+’</button>’;
+html+=’</div>’;
+html+=’<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:12px;color:#6b8aa8;font-weight:700">’+(S.splitMode===‘custom’?L.whoConsumedCustom:L.whoConsumed)+’</span><button class="btn" id="btn-all" style="padding:3px 10px;background:#1e2a38;color:#4a9eff;font-size:12px">’+(S.expParticipants.length===people.length?L.deselectAll:L.selectAll)+’</button></div>’;
+html+=’<div style="display:flex;flex-wrap:wrap;gap:7px">’;
+people.forEach(function(p){html+=’<button class="chip'+(S.expParticipants.indexOf(p.id)!==-1?' on':'')+' chip-p" data-pid="'+p.id+'">’+(p.isDependent?‘D’:av(p.name))+’ ‘+esc(p.name)+’</button>’;});
+html+=’</div><div id="share-preview" style="display:none"></div></div>’;
+html+=’<div id="custom-rows-container"></div>’;
+html+=’<div style="display:flex;gap:8px;margin-top:12px"><button class="btn" id="btn-save-exp" style="flex:1;padding:10px;background:#238636;color:#fff;font-size:14px">’+L.saveExpense+’</button><button class="btn" id="btn-cancel-exp" style="padding:10px 14px;background:#1e2a38;color:#6b8aa8;font-size:14px">X</button></div>’;
+html+=’</div>’;
+}else{
+html+=’<button class="btn" id="btn-show-exp" style="width:100%;padding:13px;background:linear-gradient(135deg,#1a6630,#2ea043);color:#fff;font-size:15px;margin-bottom:14px;border-radius:12px">’+L.addExpense+’</button>’;
+}
+if(expenses.length===0){html+=’<div style="text-align:center;color:#1e2e3e;padding:40px 0;font-size:14px;font-weight:700">’+L.noExpenses+’</div>’;}
+else{
+html+=’<div class="label">’+expenses.length+’ - ‘+fmt(total)+’ ‘+L.total+’</div>’;
+expenses.slice().reverse().forEach(function(e){
+var isCustom=e.splitMode===‘custom’;
+var addedByMe=e.addedBy===ME;
+var cnt=isCustom?null:shareCount(e,people);
+var totalShares=cnt?Object.values(cnt).reduce(function(s,n){return s+n;},0):0;
+var unit=(cnt&&totalShares)?e.amount/totalShares:0;
+var splitDesc=’’;
+if(isCustom){Object.entries(e.customShares||{}).forEach(function(entry,i){if(i>0)splitDesc+=’ - ‘;splitDesc+=esc(pName(entry[0]))+’: ‘+fmt(entry[1]);});}
+else{Object.entries(cnt||{}).forEach(function(entry,i){if(i>0)splitDesc+=’ - ‘;splitDesc+=esc(pName(entry[0]))+’: ‘+fmt(unit*entry[1]);});}
+html+=’<div class="card anim-pop" style="margin-bottom:10px;'+(e.reviewed?'border-color:#3fb95028':'border-color:#f0883e28')+'">’;
+html+=’<div style="display:flex;justify-content:space-between;align-items:flex-start">’;
+html+=’<div style="display:flex;gap:12px;flex:1;min-width:0">’;
+html+=’<div style="font-size:26px;line-height:1;flex-shrink:0;width:32px;text-align:center;font-weight:800;color:#4a6a88">’+ee(e.desc)+’</div>’;
+html+=’<div style="flex:1;min-width:0">’;
+html+=’<div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap"><span style="font-weight:800;font-size:15px">’+esc(e.desc)+’</span>’;
+html+=’<span style="font-size:10px;padding:2px 7px;border-radius:10px;font-weight:800;'+(e.reviewed?'background:#3fb95022;color:#3fb950;border:1px solid #3fb95044':'background:#f0883e22;color:#f0883e;border:1px solid #f0883e44')+'">’+(e.reviewed?L.reviewed:L.pending)+’</span>’;
+if(isCustom)html+=’<span style="font-size:10px;padding:2px 7px;border-radius:10px;font-weight:800;background:#a66eff22;color:#a66eff;border:1px solid #a66eff44">Custom</span>’;
+html+=’</div>’;
+html+=’<div style="font-size:12px;color:#4a6a88;margin-top:2px">’+L.paidBy+’ <span style="color:#4a9eff">’+esc(pName(e.payerId))+’</span> - ‘+L.addedBy+’ <span style="color:#6b8aa8">’+esc(e.addedBy||’?’)+’</span></div>’;
+html+=’<div style="font-size:11px;color:#3fb950;margin-top:2px">’+splitDesc+’</div>’;
+html+=’</div></div>’;
+html+=’<div style="text-align:right;margin-left:10px;flex-shrink:0"><div style="font-family:Fredoka One,cursive;font-size:18px">’+fmt(e.amount)+’</div>’;
+html+=’<div style="display:flex;gap:4px;margin-top:6px;justify-content:flex-end">’;
+if(isOwner&&!e.reviewed)html+=’<button class="btn btn-review" data-eid="'+e.id+'" style="padding:3px 8px;background:#3fb95022;color:#3fb950;font-size:11px;border:1px solid #3fb95044">’+L.review+’</button>’;
+if(isOwner||addedByMe)html+=’<button class="btn btn-del-exp" data-eid="'+e.id+'" style="padding:3px 8px;background:#1e2a38;color:#f85149;font-size:11px">Del</button>’;
+html+=’</div></div></div></div>’;
+});
+}
+html+=’</div>’;
+return html;
 }
 function tabSettle(tr,people,adults,expenses,pName){
-  var L=t();
-  if(adults.length<2||expenses.length===0)return '<div style="text-align:center;color:#1e2e3e;padding:60px 0"><div style="font-size:50px;margin-bottom:12px">🧮</div><div style="font-size:14px;font-weight:700">Need 2+ members and 1+ expense</div></div>';
-  var result=settle(adults,expenses,people);
-  var bal=result.bal,txns=result.txns;
-  var html='<div class="anim-up">';
-  html+='<button class="btn" id="btn-pdf" style="width:100%;padding:13px;background:linear-gradient(135deg,#6e30cc,#a66eff);color:#fff;font-size:15px;margin-bottom:18px;border-radius:12px">'+L.exportPDF+'</button>';
-  html+='<div class="label">'+L.balanceSummary+'</div>';
-  adults.forEach(function(p){
-    var b=bal[p.id]||0;
-    var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
-    html+='<div class="card anim-pop" style="margin-bottom:8px;display:flex;align-items:center;justify-content:space-between">';
-    html+='<div style="display:flex;align-items:center;gap:10px">'+avHtml(p,42)+'<div><div style="font-weight:800">'+esc(p.name)+'</div>';
-    if(p.upi)html+='<div style="font-size:11px;color:#4a9eff">UPI: '+esc(p.upi)+'</div>';
-    if(deps.length)html+='<div style="font-size:11px;color:#f0883e">+'+deps.map(function(d){return esc(d.name);}).join(', ')+'</div>';
-    html+='</div></div>';
-    html+='<div style="text-align:right"><div style="font-family:Fredoka One,cursive;font-size:18px;color:'+(b>0?'#3fb950':b<0?'#f85149':'#2e4a64')+'">'+(b>0?'+':'')+fmt(b)+'</div>';
-    html+='<div style="font-size:11px;color:#2e4a64">'+(b>0?L.getsBack:b<0?L.owes:L.settled)+'</div></div></div>';
-  });
-  html+='<div class="label" style="margin-top:20px">'+(txns.length===0?L.allSettled:txns.length+' '+L.paymentsNeeded)+'</div>';
-  if(txns.length===0)html+='<div style="text-align:center;font-size:44px;padding:20px 0">🎉</div>';
-  txns.forEach(function(tx){
-    var toP=people.find(function(p){return p.id===tx.to;});
-    html+='<div class="card anim-pop" style="margin-bottom:8px;border-color:#4a9eff28">';
-    html+='<div style="display:flex;align-items:center;justify-content:space-between">';
-    html+='<div style="display:flex;align-items:center;gap:10px">'+avHtml(people.find(function(p){return p.id===tx.from;}),36);
-    html+='<div style="font-size:14px"><span style="font-weight:800;color:#f85149">'+esc(pName(tx.from))+'</span> <span style="color:#2e4a64">'+L.pays+'</span> <span style="font-weight:800;color:#3fb950">'+esc(pName(tx.to))+'</span></div>';
-    html+=avHtml(toP,36)+'</div>';
-    html+='<div style="font-family:Fredoka One,cursive;font-size:20px;color:#4a9eff">'+fmt(tx.amount)+'</div></div>';
-    if(toP&&toP.upi)html+='<div style="margin-top:8px;padding:7px 10px;background:#4a9eff0d;border-radius:8px;font-size:12px;color:#4a9eff">'+L.payViaUPI+' <b>'+esc(toP.upi)+'</b></div>';
-    html+='</div>';
-  });
+var L=t();
+if(adults.length<2||expenses.length===0)return ‘<div style="text-align:center;color:#1e2e3e;padding:60px 0"><div style="font-size:50px;margin-bottom:12px">🧮</div><div style="font-size:14px;font-weight:700">Need 2+ members and 1+ expense</div></div>’;
+var result=settle(adults,expenses,people);
+var bal=result.bal,txns=result.txns;
+var html=’<div class="anim-up">’;
+html+=’<button class="btn" id="btn-pdf" style="width:100%;padding:13px;background:linear-gradient(135deg,#6e30cc,#a66eff);color:#fff;font-size:15px;margin-bottom:18px;border-radius:12px">’+L.exportPDF+’</button>’;
+html+=’<div class="label">’+L.balanceSummary+’</div>’;
+adults.forEach(function(p){
+var b=bal[p.id]||0;
+var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
+html+=’<div class="card anim-pop" style="margin-bottom:8px;display:flex;align-items:center;justify-content:space-between">’;
+html+=’<div style="display:flex;align-items:center;gap:10px">’+avHtml(p,42)+’<div><div style="font-weight:800">’+esc(p.name)+’</div>’;
+if(p.upi)html+=’<div style="font-size:11px;color:#4a9eff">UPI: ‘+esc(p.upi)+’</div>’;
+if(deps.length)html+=’<div style="font-size:11px;color:#f0883e">+’+deps.map(function(d){return esc(d.name);}).join(’, ‘)+’</div>’;
+html+=’</div></div>’;
+html+=’<div style="text-align:right"><div style="font-family:Fredoka One,cursive;font-size:18px;color:'+(b>0?'#3fb950':b<0?'#f85149':'#2e4a64')+'">’+(b>0?’+’:’’)+fmt(b)+’</div>’;
+html+=’<div style="font-size:11px;color:#2e4a64">’+(b>0?L.getsBack:b<0?L.owes:L.settled)+’</div></div></div>’;
+});
+html+=’<div class="label" style="margin-top:20px">’+(txns.length===0?L.allSettled:txns.length+’ ‘+L.paymentsNeeded)+’</div>’;
+if(txns.length===0)html+=’<div style="text-align:center;font-size:44px;padding:20px 0">🎉</div>’;
+txns.forEach(function(tx){
+var toP=people.find(function(p){return p.id===tx.to;});
+html+=’<div class="card anim-pop" style="margin-bottom:8px;border-color:#4a9eff28">’;
+html+=’<div style="display:flex;align-items:center;justify-content:space-between">’;
+html+=’<div style="display:flex;align-items:center;gap:10px">’+avHtml(people.find(function(p){return p.id===tx.from;}),36);
+html+=’<div style="font-size:14px"><span style="font-weight:800;color:#f85149">’+esc(pName(tx.from))+’</span> <span style="color:#2e4a64">’+L.pays+’</span> <span style="font-weight:800;color:#3fb950">’+esc(pName(tx.to))+’</span></div>’;
+html+=avHtml(toP,36)+’</div>’;
+html+=’<div style="font-family:Fredoka One,cursive;font-size:20px;color:#4a9eff">’+fmt(tx.amount)+’</div></div>’;
+if(toP&&toP.upi)html+=’<div style="margin-top:8px;padding:7px 10px;background:#4a9eff0d;border-radius:8px;font-size:12px;color:#4a9eff">’+L.payViaUPI+’ <b>’+esc(toP.upi)+’</b></div>’;
+html+=’</div>’;
+});
 
-// ── PER PERSON SUMMARY ─────────────────────────────────────────────────
-html+=’<div class="label" style="margin-top:20px">’+L.perPersonSummary+’</div>’;
+// ── Per Person Summary ──────────────────────────────────────────────────────
+html+=’<div class="label" style="margin-top:20px">Per Person Summary</div>’;
 adults.forEach(function(p){
 var deps=people.filter(function(x){return x.isDependent&&x.guardianId===p.id;});
 var allMembers=[p].concat(deps);
 
 ```
-// Group total uses adultShare() — same function as settle() so always consistent
-var groupTotal=expenses.reduce(function(s,e){return s+adultShare(e,p.id,people);},0);
-var paid=expenses.filter(function(e){return e.payerId===p.id;}).reduce(function(s,e){return s+e.amount;},0);
+var paid=expenses
+  .filter(function(e){return e.payerId===p.id;})
+  .reduce(function(s,e){return s+e.amount;},0);
+
+// Group total: use adultShare so it is always consistent with settle()
+// adultShare already accounts for guardian's own share + all dependants' shares
+var groupTotal=0;
+expenses.forEach(function(e){
+  groupTotal+=adultShare(e,p.id,people);
+});
 
 html+='<div class="card" style="margin-bottom:12px">';
 
-// Header row
+// ── Card header ────────────────────────────────────────────────────────────
 html+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #1e2a38">';
 html+=avHtml(p,40);
 html+='<div style="flex:1"><div style="font-weight:800;font-size:15px">'+esc(p.name);
@@ -464,79 +483,61 @@ html+='<div style="font-size:11px;color:#2e4a64">Paid: <span style="color:#dce6f
 html+='<div style="font-size:11px;color:#2e4a64">Share: <span style="font-weight:800;color:'+(groupTotal>paid?'#f85149':'#3fb950')+'">'+fmt(groupTotal)+'</span></div>';
 html+='</div></div>';
 
-// One row per member (guardian + each dependent)
+// ── Per-member rows ────────────────────────────────────────────────────────
 allMembers.forEach(function(m){
-  // Find expenses where this member appears in rawParticipants
+  // Only show expenses where this exact person was selected
   var mExp=expenses.filter(function(e){
     var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
     return raw.indexOf(m.id)!==-1;
   });
   if(mExp.length===0)return;
 
-  // Member's individual share per expense:
-  // Equal split  -> 1 unit (e.amount / totalShares)
-  // Custom split -> for GUARDIAN: customShares[guardianId] (already includes dependent costs)
-  //                 for DEPENDENT: show as "bundled" since their cost is in guardian's amount
-  var mTotal=mExp.reduce(function(s,e){
+  // This member's individual share total:
+  // - For equal split: 1 share out of total shares (1 unit / totalUnits * amount)
+  // - For custom split: only the guardian has a dollar value; dependent shows Rs.0.00
+  var mTotal=0;
+  mExp.forEach(function(e){
     if(e.splitMode==='custom'){
-      if(m.isDependent){
-        // Dependent's cost is inside guardian's customShares — show 0 here, noted as bundled
-        return s;
-      }
-      return s+((e.customShares&&e.customShares[p.id])||0);
+      mTotal+=m.isDependent?0:((e.customShares&&e.customShares[p.id])||0);
+    }else{
+      var cnt=shareCount(e,people);
+      var ts=Object.values(cnt).reduce(function(s,n){return s+n;},0);
+      // 1 share per person (dependant counts as its own 1 share under guardian)
+      if(ts>0) mTotal+=e.amount/ts;
     }
-    // Equal: every selected person gets exactly 1 unit
-    var cnt=shareCount(e,people);
-    var ts=Object.values(cnt).reduce(function(a,n){return a+n;},0);
-    return ts>0?s+(e.amount/ts):s;
-  },0);
+  });
 
   html+='<div style="background:#0b0f14;border-radius:10px;padding:8px 10px;margin-bottom:6px">';
-  html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">';
-  html+=avHtml(m,26);
+  html+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">';
+  html+=avHtml(m,28);
   html+='<div style="font-size:13px;font-weight:800;flex:1">'+esc(m.name);
-  if(m.isDependent)html+=' <span style="font-size:10px;color:#f0883e">👶 dependent</span>';
+  if(m.isDependent)html+=' <span style="font-size:10px;color:#f0883e">dependent</span>';
   html+='</div>';
   html+='<div style="font-size:13px;font-weight:800;color:#4a9eff">'+fmt(mTotal)+'</div>';
   html+='</div>';
 
-  // Expense lines for this member
+  // Expense line-items for this member
   mExp.forEach(function(e){
-    var lineAmt=0;
-    var note='';
+    var share=0;
     if(e.splitMode==='custom'){
-      if(m.isDependent){
-        // Show the expense name but mark cost as bundled into guardian
-        lineAmt=0;
-        note=' <span style="font-size:9px;color:#f0883e">('+L.bundled+')</span>';
-      }else{
-        lineAmt=(e.customShares&&e.customShares[p.id])||0;
-        // Note if any dependents are included in this guardian amount
-        var depsInExp=deps.filter(function(d){
-          var raw=(e.rawParticipants&&e.rawParticipants.length>0)?e.rawParticipants:(e.participants||[]);
-          return raw.indexOf(d.id)!==-1;
-        });
-        if(depsInExp.length){
-          note=' <span style="font-size:9px;color:#f0883e">(incl. '+depsInExp.map(function(d){return esc(d.name);}).join(', ')+')</span>';
-        }
-      }
+      share=m.isDependent?0:((e.customShares&&e.customShares[p.id])||0);
     }else{
       var cnt=shareCount(e,people);
-      var ts=Object.values(cnt).reduce(function(a,n){return a+n;},0);
-      lineAmt=ts>0?e.amount/ts:0;
+      var ts=Object.values(cnt).reduce(function(s,n){return s+n;},0);
+      if(ts>0) share=e.amount/ts;
     }
-    html+='<div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#4a6a88;padding:3px 0;border-top:1px solid #1a2434">';
-    html+='<span>'+ee(e.desc)+' '+esc(e.desc)+note+'</span>';
-    html+='<span style="color:'+(lineAmt>0?'#dce6f0':'#3a5a78')+';font-weight:700">'+(lineAmt>0?fmt(lineAmt):'-')+'</span>';
+    html+='<div style="display:flex;justify-content:space-between;font-size:11px;color:#4a6a88;padding:3px 0;border-top:1px solid #1a2434">';
+    html+='<span>'+ee(e.desc)+' '+esc(e.desc)+'</span>';
+    html+='<span style="color:#dce6f0;font-weight:700">'+fmt(share)+'</span>';
     html+='</div>';
   });
   html+='</div>';
 });
 
-// Group total footer
+// ── Card footer ────────────────────────────────────────────────────────────
 html+='<div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid #1e2a38;margin-top:4px">';
-html+='<span style="font-size:12px;color:#3a5a78;font-weight:800">'+L.perPersonTotal;
-if(deps.length)html+=' ('+esc(p.name)+' + '+deps.map(function(d){return esc(d.name);}).join(' + ')+')';
+html+='<span style="font-size:12px;color:#3a5a78;font-weight:800">Total for '+esc(p.name);
+if(deps.length)html+=' + '+deps.map(function(d){return esc(d.name);}).join(' + ');
 html+='</span>';
 html+='<span style="font-family:Fredoka One,cursive;font-size:16px;color:#4a9eff">'+fmt(groupTotal)+'</span>';
 html+='</div>';
@@ -544,6 +545,7 @@ html+='</div>';
 ```
 
 });
+// ────────────────────────────────────────────────────────────────────────────
 
 html+=’</div>’;
 return html;
@@ -628,12 +630,7 @@ var rPeople=adults.filter(function(p){return resolvedIds.indexOf(p.id)!==-1;});
 var used=rPeople.reduce(function(s,p){return s+parseFloat(S.customShares[p.id]||0);},0);
 var rem=parseFloat(S.expAmount||0)-used;
 var html=’<div style="margin-top:10px;background:#0b0f14;border-radius:10px;padding:12px;border:1px solid #1e2a38"><div style="font-size:12px;color:#6b8aa8;font-weight:700;margin-bottom:8px">’+L.enterShares+’</div>’;
-rPeople.forEach(function(p){
-// Show which dependents are included under this guardian
-var depsUnder=people.filter(function(d){return d.isDependent&&d.guardianId===p.id&&S.expParticipants.indexOf(d.id)!==-1;});
-var label=esc(p.name)+(depsUnder.length?’ (+’+depsUnder.map(function(d){return esc(d.name);}).join(’, ‘)+’)’:’’);
-html+=’<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="font-size:13px;font-weight:700;flex:1">’+label+’</div><div style="display:flex;align-items:center;gap:4px"><span style="color:#3a5a78;font-size:13px">Rs.</span><input class="inp custom-share-inp" data-pid="'+p.id+'" value="'+esc(S.customShares[p.id]||'')+'" type="number" placeholder="0" style="width:90px;padding:6px 10px;text-align:right"/></div></div>’;
-});
+rPeople.forEach(function(p){html+=’<div style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><div style="font-size:13px;font-weight:700;flex:1">’+esc(p.name)+’</div><div style="display:flex;align-items:center;gap:4px"><span style="color:#3a5a78;font-size:13px">Rs.</span><input class="inp custom-share-inp" data-pid="'+p.id+'" value="'+esc(S.customShares[p.id]||'')+'" type="number" placeholder="0" style="width:90px;padding:6px 10px;text-align:right"/></div></div>’;});
 html+=’<div style="display:flex;justify-content:space-between;font-size:12px;padding-top:8px;border-top:1px solid #1e2a38;margin-top:4px"><span style="color:#6b8aa8">’+L.remaining+’</span><span id="rem-amt" style="font-weight:800;color:'+(Math.abs(rem)<0.01?'#3fb950':rem<0?'#f85149':'#f0883e')+'">’+fmt(rem)+’</span></div></div>’;
 container.innerHTML=html;
 container.querySelectorAll(’.custom-share-inp’).forEach(function(inp){inp.addEventListener(‘input’,function(e){S.customShares[inp.dataset.pid]=e.target.value;var used2=rPeople.reduce(function(s,p){return s+parseFloat(S.customShares[p.id]||0);},0);var rem2=parseFloat(S.expAmount||0)-used2;var el=document.getElementById(‘rem-amt’);if(el){el.textContent=fmt(rem2);el.style.color=Math.abs(rem2)<0.01?’#3fb950’:rem2<0?’#f85149’:’#f0883e’;}});});
